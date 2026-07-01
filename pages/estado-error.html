@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTL Tracking | Estados de error</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#104d84',
+              navyDark: '#18243e',
+              cyan: '#20c3ef',
+              text: '#6f7480',
+              panel: '#dedede',
+              green: '#52ef7d'
+            }
+          },
+          boxShadow: {
+            modal: '0 8px 24px rgba(0, 0, 0, .12)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; }
+    .world-map {
+      background-image:
+        radial-gradient(circle at 15% 55%, rgba(255,255,255,.08) 0 12%, transparent 12%),
+        radial-gradient(circle at 35% 68%, rgba(255,255,255,.08) 0 14%, transparent 14%),
+        radial-gradient(circle at 68% 55%, rgba(255,255,255,.08) 0 16%, transparent 16%),
+        radial-gradient(circle at 80% 72%, rgba(255,255,255,.08) 0 12%, transparent 12%);
+    }
+    .flag-arg {
+      background: linear-gradient(to right, #82d7ff 0 33%, #ffffff 33% 66%, #82d7ff 66% 100%);
+    }
+    .flag-bel {
+      background: linear-gradient(to right, #111111 0 33%, #ffd74b 33% 66%, #ef4343 66% 100%);
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-white text-brand-text antialiased">
+
+<!-- Top navigation -->
+<header class="mx-auto max-w-[1366px] px-6 pb-[46px] pt-[58px] lg:px-0">
+  <nav class="mx-auto hidden max-w-[1050px] items-center justify-center gap-y-4 text-[24px] uppercase tracking-[-0.02em] text-[#666b73] lg:flex">
+    <a href="carga-maritima.html#maritima" class="border-b-[5px] border-brand-cyan px-10 pb-[7px] text-brand-cyan">Detalle de carga</a>
+    <span class="px-8 text-[#8e8e8e]">|</span>
+    <a href="otros-embarques.html" class="px-10 pb-[7px]">Otros embarques</a>
+    <span class="px-8 text-[#8e8e8e]">|</span>
+    <a href="estado-cuenta.html" class="px-10 pb-[7px]">Estado de cuenta</a>
+    <span class="px-8 text-[#8e8e8e]">|</span>
+    <a href="mi-perfil.html" class="px-10 pb-[7px]">Mi perfil</a>
+  </nav>
+  <nav class="mx-auto max-w-[640px] text-[16px] font-normal uppercase leading-none tracking-[-0.02em] text-[#6a6d72] sm:text-[18px] lg:hidden">
+    <div class="flex items-end justify-center gap-5 sm:gap-7">
+      <a href="carga-maritima.html#maritima" class="border-b-[4px] border-brand-cyan pb-[6px] text-brand-cyan">Detalle de carga</a>
+      <span class="pb-[7px] text-[#919191]">|</span>
+      <a href="otros-embarques.html" class="pb-[8px]">Otros embarques</a>
+    </div>
+    <div class="mt-4 flex items-end justify-center gap-5 sm:gap-7">
+      <a href="estado-cuenta.html" class="pb-[8px]">Estado de cuenta</a>
+      <span class="pb-[7px] text-[#919191]">|</span>
+      <a href="mi-perfil.html" class="pb-[8px]">Mi perfil</a>
+    </div>
+  </nav>
+</header>
+
+<main class="mx-auto max-w-[1366px] px-4 pb-12 sm:px-6 lg:px-0 lg:pb-16">
+  <!-- Login required over home -->
+  <section id="login" class="relative mx-auto min-h-[760px] max-w-[1366px] scroll-mt-10 overflow-hidden lg:min-h-[430px]">
+    <div class="absolute inset-x-0 top-[122px] h-[420px] bg-brand-panel lg:top-[92px] lg:h-[203px]"></div>
+    <div class="relative z-0 mx-auto max-w-[640px] px-4 pb-8 pt-[180px] text-center lg:absolute lg:left-[230px] lg:top-[145px] lg:mx-0 lg:max-w-[565px] lg:px-0 lg:pb-0 lg:pt-0 lg:text-left">
+      <h1 class="text-[42px] font-bold uppercase leading-none tracking-[-0.045em] text-brand-navy sm:text-[50px] lg:text-[59px]">Move Together</h1>
+      <p class="mt-6 max-w-[560px] text-[18px] leading-[1.45] text-[#5f6672] sm:text-[19px] lg:mt-8 lg:text-[22px]">
+        En NTL seguimos sumando soluciones efectivas. Chequeá el estado de tus cargas,
+        detalles y documentación, simplemente ingresando BL o N° de Contendor.
+      </p>
+    </div>
+    <div class="world-map relative z-0 mx-auto mt-6 h-[321px] w-full max-w-[423px] bg-brand-navyDark lg:absolute lg:right-[170px] lg:top-[31px] lg:mt-0"></div>
+    <div class="relative z-0 mx-auto -mt-[321px] w-full max-w-[423px] px-6 pb-8 pt-10 text-white sm:px-8 lg:absolute lg:right-[170px] lg:top-[31px] lg:mt-0 lg:w-[423px] lg:px-[27px] lg:pb-[34px] lg:pt-[58px]">
+      <p class="text-[16px] font-bold leading-none">AWB No./BL No.</p>
+      <div class="mt-[20px] flex h-[49px] items-center bg-white text-[#8a8f97]"><div class="flex h-full w-[53px] shrink-0 items-center justify-center text-brand-navy"><svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></div><div class="flex h-full w-[102px] shrink-0 items-center border-r border-[#cfcfcf] pl-[18px] text-[15px]">BL</div><div class="flex-1"></div></div>
+      <div class="mt-[76px] flex justify-center lg:justify-center"><span class="min-w-[133px] bg-brand-cyan px-6 py-[12px] text-center text-[17px] font-bold uppercase text-white">Buscar</span></div>
+    </div>
+    <div class="absolute left-1/2 top-[8px] z-10 w-[calc(100%-2rem)] max-w-[574px] -translate-x-1/2 bg-white px-6 pb-8 pt-6 text-center shadow-modal sm:px-10 lg:w-[574px] lg:px-[44px] lg:pb-[34px] lg:pt-[26px]">
+      <a href="../index.html" class="absolute right-[20px] top-[14px] text-[30px] leading-none text-[#d5d5d5]">×</a>
+      <div class="text-brand-cyan">
+        <svg viewBox="0 0 24 24" class="mx-auto h-[58px] w-[58px]" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v8"></path><circle cx="12" cy="18" r="1"></circle></svg>
+      </div>
+      <p class="mt-[8px] text-[20px] leading-[1.35] text-[#767a80]">Para poder realizar esta consulta Ud. debe estar Logueado.</p>
+      <form action="#login" class="mx-auto mt-[46px] max-w-[240px] space-y-[26px] text-[16px] italic text-[#979ba2]">
+        <input class="w-full border-b border-[#a9acb2] pb-[7px] text-center outline-none" placeholder="Usuario" />
+        <input class="w-full border-b border-[#a9acb2] pb-[7px] text-center outline-none" placeholder="Contraseña" type="password" />
+        <button class="rounded-[10px] bg-brand-cyan px-[26px] py-[9px] text-[16px] font-normal uppercase not-italic text-white">Ingresar</button>
+      </form>
+      <p class="mt-[28px] text-[17px] text-[#7d8086]">Si aún no tiene usuario <a href="#" class="text-brand-cyan underline">Contactarse</a></p>
+    </div>
+  </section>
+
+  <!-- BL error over home -->
+  <section id="bl-error" class="relative mx-auto mt-[78px] min-h-[720px] max-w-[1366px] scroll-mt-10 overflow-hidden border-t border-[#ececec] pt-[24px] lg:min-h-[430px]">
+    <div class="absolute inset-x-0 top-[122px] h-[420px] bg-brand-panel lg:top-[116px] lg:h-[203px]"></div>
+    <div class="relative z-0 mx-auto max-w-[640px] px-4 pb-8 pt-[180px] text-center lg:absolute lg:left-[230px] lg:top-[169px] lg:mx-0 lg:max-w-[565px] lg:px-0 lg:pb-0 lg:pt-0 lg:text-left">
+      <h2 class="text-[42px] font-bold uppercase leading-none tracking-[-0.045em] text-brand-navy sm:text-[50px] lg:text-[59px]">Move Together</h2>
+      <p class="mt-6 max-w-[560px] text-[18px] leading-[1.45] text-[#5f6672] sm:text-[19px] lg:mt-8 lg:text-[22px]">
+        En NTL seguimos sumando soluciones efectivas. Chequeá el estado de tus cargas,
+        detalles y documentación, simplemente ingresando BL o N° de Contendor.
+      </p>
+    </div>
+    <div class="world-map relative z-0 mx-auto mt-6 h-[321px] w-full max-w-[423px] bg-brand-navyDark lg:absolute lg:right-[170px] lg:top-[55px] lg:mt-0"></div>
+    <div class="relative z-0 mx-auto -mt-[321px] w-full max-w-[423px] px-6 pb-8 pt-10 text-white sm:px-8 lg:absolute lg:right-[170px] lg:top-[55px] lg:mt-0 lg:w-[423px] lg:px-[27px] lg:pb-[34px] lg:pt-[58px]">
+      <p class="text-[16px] font-bold leading-none">AWB No./BL No.</p>
+      <div class="mt-[20px] flex h-[49px] items-center bg-white text-[#8a8f97]"><div class="flex h-full w-[53px] shrink-0 items-center justify-center text-brand-navy"><svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></div><div class="flex h-full w-[102px] shrink-0 items-center border-r border-[#cfcfcf] pl-[18px] text-[15px]">BL</div><div class="flex-1"></div></div>
+      <div class="mt-[76px] flex justify-center"><span class="min-w-[133px] bg-brand-cyan px-6 py-[12px] text-center text-[17px] font-bold uppercase text-white">Buscar</span></div>
+    </div>
+    <div class="absolute left-1/2 top-[10px] z-10 w-[calc(100%-2rem)] max-w-[574px] -translate-x-1/2 bg-white px-6 pb-8 pt-6 text-center shadow-modal sm:px-10 lg:w-[574px] lg:px-[44px] lg:pb-[34px] lg:pt-[26px]">
+      <div class="text-brand-cyan">
+        <svg viewBox="0 0 24 24" class="mx-auto h-[58px] w-[58px]" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v8"></path><circle cx="12" cy="18" r="1"></circle></svg>
+      </div>
+      <p class="mx-auto mt-[10px] max-w-[432px] text-[20px] leading-[1.35] text-[#767a80]">Ud. ha ingresado un N° de BL erróneo. Verifique e intente nuevamente. Si el problema persiste por favor <a href="#" class="text-brand-cyan underline">Contactarse</a></p>
+      <a href="../index.html" class="mt-[28px] inline-block rounded-[10px] bg-brand-cyan px-[31px] py-[9px] text-[16px] uppercase text-white">OK</a>
+    </div>
+  </section>
+
+  <!-- Login required over detail -->
+  <section id="detalle-login" class="relative mx-auto mt-[84px] max-w-[1234px] scroll-mt-10 border-t border-[#ececec] pt-[36px]">
+    <div class="grid gap-4 lg:grid-cols-[429px_1fr]">
+      <div class="bg-brand-navy px-[31px] pb-[34px] pt-[22px] text-white">
+        <p class="text-[16px] leading-none text-[#d8ebf5]">BL / N° CONTENEDOR</p>
+        <div class="mt-[18px] flex h-[45px] items-center bg-white text-[#8a8f97]"><div class="flex w-[47px] justify-center text-brand-navy"><svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></div><span class="w-[38px] text-[15px] text-[#8d9298]">BL</span><span class="text-[#b8bbc0]">|</span><span class="px-4 text-[17px] text-brand-navy">2205 - 24783</span><span class="ml-auto mr-[11px] rounded-[10px] bg-brand-cyan px-[13px] py-[6px] text-[14px] uppercase leading-none text-white">Buscar</span></div>
+        <div class="mt-[19px] space-y-[7px] text-[18px] leading-[1.25]"><p><span class="font-bold uppercase">Tipo de operacion:</span> Importación</p><p><span class="font-bold uppercase">Tipo de transporte:</span> Marítimo</p><p><span class="font-bold uppercase">Consignee:</span> Familia García Regueira S.A.</p><p><span class="font-bold uppercase">Shipper:</span> Heilongjiang Grassland LTD.</p><p><span class="font-bold uppercase">MBL:</span> 218714434</p><p><span class="font-bold uppercase">HBL:</span> SEF220525333</p><p><span class="font-bold uppercase">Incoterm:</span> FOB</p><p><span class="font-bold uppercase">Seguro:</span> SI <span class="ml-2 inline-block h-3 w-3 rotate-45 border-b-2 border-r-2 border-white align-middle"></span></p></div>
+        <div class="mt-[18px] bg-brand-panel px-[64px] py-[16px] text-[15px] leading-[1.25] text-[#676d76]"><p>ASEGURADORA: Hanseatica</p><p>IMPORTE: USD 5000</p><p>N° PÓLIZA: 3868745</p><p>CERTIFICADO</p></div>
+        <div class="mt-[20px] space-y-[8px] text-[18px] leading-[1.25]"><p><span class="font-bold uppercase">Dias libres:</span> 18</p><p><span class="font-bold uppercase">Fecha libre:</span> 29/08/22</p><p><span class="font-bold uppercase">Terminal devolucion:</span> TERMINAL SUR</p><p class="flex items-center gap-2"><span class="font-bold uppercase">Libre deuda:</span><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg></p></div>
+      </div>
+      <div>
+        <div class="flex min-h-[67px] items-center justify-between bg-brand-navy px-[21px] text-white"><div class="flex items-center gap-[18px] text-[18px] font-bold uppercase"><span class="h-[30px] w-[30px] rounded-full bg-brand-green"></span><span>Estado: Arribado</span></div><div class="flex items-center gap-[20px] text-[15px] uppercase text-[#d6ebf5]"><span>Mantenerme informado</span><span>Si</span><span class="flex h-[18px] w-[34px] items-center rounded-full bg-brand-cyan px-[2px]"><span class="ml-auto h-[14px] w-[14px] rounded-full bg-[#f6dedc]"></span></span><span>No</span></div></div>
+        <div class="bg-brand-panel px-[44px] py-[20px] text-brand-navy">
+          <div class="flex justify-center"><img src="../assets/img/maersk-logo.png" alt="Maersk" class="h-[48px] w-[149px] object-contain" /></div>
+          <div class="mt-[22px] grid items-start gap-6 lg:grid-cols-[1fr_200px_1fr]">
+            <div class="justify-self-center text-center"><svg viewBox="0 0 64 64" class="mx-auto h-[48px] w-[48px]" fill="currentColor"><path d="M10 34h44l-4 6H14z"></path><path d="M14 28h10v6H14z"></path><path d="M26 24h6v10h-6z"></path><path d="M34 19h6v15h-6z"></path><path d="M40 24h6v10h-6z"></path><path d="M8 40h48l-6 8H14z"></path></svg><p class="text-[15px]">Fecha embarque: 12/04/19</p><p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-arg inline-block h-[11px] w-[15px]"></span>Argentina, 01, AR</p><p class="mt-[4px] text-[16px]">Exolgan / Terminal 4</p></div>
+            <div class="flex items-center gap-4 justify-self-center self-center text-center text-[16px] text-brand-text"><span class="h-px w-[87px] bg-white"></span><span>Directo</span><span class="h-px w-[87px] bg-white"></span></div>
+            <div class="justify-self-center text-center"><svg viewBox="0 0 64 64" class="mx-auto h-[48px] w-[48px]" fill="currentColor"><path d="M10 34h44l-4 6H14z"></path><path d="M14 28h10v6H14z"></path><path d="M26 24h6v10h-6z"></path><path d="M34 19h6v15h-6z"></path><path d="M40 24h6v10h-6z"></path><path d="M8 40h48l-6 8H14z"></path></svg><p class="text-[15px]">Fecha de Arribo: 12/04/19</p><p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-bel inline-block h-[11px] w-[15px]"></span>Antwerp, 01, BE</p><p class="mt-[4px] text-[16px]">Exolgan / Terminal 4</p></div>
+          </div>
+        </div>
+        <div class="mt-[20px] grid gap-4 lg:grid-cols-[1fr_219px]"><div class="bg-brand-panel px-[20px] pb-[18px] pt-[16px] text-center text-brand-navy"><h2 class="text-[18px] font-bold uppercase">Tipo de carga : FCL</h2><div class="mt-[10px] h-[182px] border border-white"></div></div><div class="bg-brand-panel px-[16px] pb-[18px] pt-[18px] text-center text-[18px] font-bold uppercase text-brand-navy">Malvina</div></div>
+      </div>
+    </div>
+    <div class="pointer-events-none absolute left-1/2 top-[2px] z-10 w-[calc(100%-2rem)] max-w-[574px] -translate-x-1/2 bg-white px-6 pb-8 pt-6 text-center shadow-modal sm:px-10 lg:w-[574px] lg:px-[44px] lg:pb-[34px] lg:pt-[26px]">
+      <div class="absolute right-[20px] top-[14px] text-[30px] leading-none text-[#d5d5d5]">×</div>
+      <div class="text-brand-cyan"><svg viewBox="0 0 24 24" class="mx-auto h-[58px] w-[58px]" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v8"></path><circle cx="12" cy="18" r="1"></circle></svg></div>
+      <p class="mt-[8px] text-[20px] leading-[1.35] text-[#767a80]">Para poder realizar esta consulta Ud. debe estar Logueado.</p>
+      <div class="mx-auto mt-[46px] max-w-[240px] space-y-[26px] text-[16px] italic text-[#979ba2]"><div class="border-b border-[#a9acb2] pb-[7px] text-center">Usuario</div><div class="border-b border-[#a9acb2] pb-[7px] text-center">Contraseña</div><div class="inline-block rounded-[10px] bg-brand-cyan px-[26px] py-[9px] text-[16px] font-normal uppercase not-italic text-white">Ingresar</div></div>
+      <p class="mt-[28px] text-[17px] text-[#7d8086]">Si aún no tiene usuario <span class="text-brand-cyan underline">Contactarse</span></p>
+    </div>
+  </section>
+
+  <!-- BL error over detail -->
+  <section id="detalle-bl" class="relative mx-auto mt-[84px] max-w-[1234px] scroll-mt-10 border-t border-[#ececec] pt-[36px]">
+    <div class="grid gap-4 lg:grid-cols-[429px_1fr]">
+      <div class="bg-brand-navy px-[31px] pb-[34px] pt-[22px] text-white">
+        <p class="text-[16px] leading-none text-[#d8ebf5]">BL / N° CONTENEDOR</p>
+        <div class="mt-[18px] flex h-[45px] items-center bg-white text-[#8a8f97]"><div class="flex w-[47px] justify-center text-brand-navy"><svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></div><span class="w-[38px] text-[15px] text-[#8d9298]">BL</span><span class="text-[#b8bbc0]">|</span><span class="px-4 text-[17px] text-brand-navy">2205 - 24783</span><span class="ml-auto mr-[11px] rounded-[10px] bg-brand-cyan px-[13px] py-[6px] text-[14px] uppercase leading-none text-white">Buscar</span></div>
+        <div class="mt-[19px] space-y-[7px] text-[18px] leading-[1.25]"><p><span class="font-bold uppercase">Tipo de operacion:</span> Importación</p><p><span class="font-bold uppercase">Tipo de transporte:</span> Marítimo</p><p><span class="font-bold uppercase">Consignee:</span> Familia García Regueira S.A.</p><p><span class="font-bold uppercase">Shipper:</span> Heilongjiang Grassland LTD.</p><p><span class="font-bold uppercase">MBL:</span> 218714434</p><p><span class="font-bold uppercase">HBL:</span> SEF220525333</p><p><span class="font-bold uppercase">Incoterm:</span> FOB</p><p><span class="font-bold uppercase">Seguro:</span> SI <span class="ml-2 inline-block h-3 w-3 rotate-45 border-b-2 border-r-2 border-white align-middle"></span></p></div>
+        <div class="mt-[18px] bg-brand-panel px-[64px] py-[16px] text-[15px] leading-[1.25] text-[#676d76]"><p>ASEGURADORA: Hanseatica</p><p>IMPORTE: USD 5000</p><p>N° PÓLIZA: 3868745</p><p>CERTIFICADO</p></div>
+        <div class="mt-[20px] space-y-[8px] text-[18px] leading-[1.25]"><p><span class="font-bold uppercase">Dias libres:</span> 18</p><p><span class="font-bold uppercase">Fecha libre:</span> 29/08/22</p><p><span class="font-bold uppercase">Terminal devolucion:</span> TERMINAL SUR</p><p class="flex items-center gap-2"><span class="font-bold uppercase">Libre deuda:</span><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg></p></div>
+      </div>
+      <div>
+        <div class="flex min-h-[67px] items-center justify-between bg-brand-navy px-[21px] text-white"><div class="flex items-center gap-[18px] text-[18px] font-bold uppercase"><span class="h-[30px] w-[30px] rounded-full bg-brand-green"></span><span>Estado: Arribado</span></div><div class="flex items-center gap-[20px] text-[15px] uppercase text-[#d6ebf5]"><span>Mantenerme informado</span><span>Si</span><span class="flex h-[18px] w-[34px] items-center rounded-full bg-brand-cyan px-[2px]"><span class="ml-auto h-[14px] w-[14px] rounded-full bg-[#f6dedc]"></span></span><span>No</span></div></div>
+        <div class="bg-brand-panel px-[44px] py-[20px] text-brand-navy">
+          <div class="flex justify-center"><img src="../assets/img/maersk-logo.png" alt="Maersk" class="h-[48px] w-[149px] object-contain" /></div>
+          <div class="mt-[22px] grid items-start gap-6 lg:grid-cols-[1fr_200px_1fr]">
+            <div class="justify-self-center text-center"><svg viewBox="0 0 64 64" class="mx-auto h-[48px] w-[48px]" fill="currentColor"><path d="M10 34h44l-4 6H14z"></path><path d="M14 28h10v6H14z"></path><path d="M26 24h6v10h-6z"></path><path d="M34 19h6v15h-6z"></path><path d="M40 24h6v10h-6z"></path><path d="M8 40h48l-6 8H14z"></path></svg><p class="text-[15px]">Fecha embarque: 12/04/19</p><p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-arg inline-block h-[11px] w-[15px]"></span>Argentina, 01, AR</p><p class="mt-[4px] text-[16px]">Exolgan / Terminal 4</p></div>
+            <div class="flex items-center gap-4 justify-self-center self-center text-center text-[16px] text-brand-text"><span class="h-px w-[87px] bg-white"></span><span>Directo</span><span class="h-px w-[87px] bg-white"></span></div>
+            <div class="justify-self-center text-center"><svg viewBox="0 0 64 64" class="mx-auto h-[48px] w-[48px]" fill="currentColor"><path d="M10 34h44l-4 6H14z"></path><path d="M14 28h10v6H14z"></path><path d="M26 24h6v10h-6z"></path><path d="M34 19h6v15h-6z"></path><path d="M40 24h6v10h-6z"></path><path d="M8 40h48l-6 8H14z"></path></svg><p class="text-[15px]">Fecha de Arribo: 12/04/19</p><p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-bel inline-block h-[11px] w-[15px]"></span>Antwerp, 01, BE</p><p class="mt-[4px] text-[16px]">Exolgan / Terminal 4</p></div>
+          </div>
+        </div>
+        <div class="mt-[20px] grid gap-4 lg:grid-cols-[1fr_219px]"><div class="bg-brand-panel px-[20px] pb-[18px] pt-[16px] text-center text-brand-navy"><h2 class="text-[18px] font-bold uppercase">Tipo de carga : FCL</h2><div class="mt-[10px] h-[182px] border border-white"></div></div><div class="bg-brand-panel px-[16px] pb-[18px] pt-[18px] text-center text-[18px] font-bold uppercase text-brand-navy">Malvina</div></div>
+      </div>
+    </div>
+    <div class="pointer-events-none absolute left-1/2 top-[4px] z-10 w-[calc(100%-2rem)] max-w-[574px] -translate-x-1/2 bg-white px-6 pb-8 pt-6 text-center shadow-modal sm:px-10 lg:w-[574px] lg:px-[44px] lg:pb-[34px] lg:pt-[26px]">
+      <div class="text-brand-cyan"><svg viewBox="0 0 24 24" class="mx-auto h-[58px] w-[58px]" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v8"></path><circle cx="12" cy="18" r="1"></circle></svg></div>
+      <p class="mx-auto mt-[10px] max-w-[432px] text-[20px] leading-[1.35] text-[#767a80]">Ud. ha ingresado un N° de BL erróneo. Verifique e intente nuevamente. Si el problema persiste por favor <span class="text-brand-cyan underline">Contactarse</span></p>
+      <div class="mt-[28px] inline-block rounded-[10px] bg-brand-cyan px-[31px] py-[9px] text-[16px] uppercase text-white">OK</div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

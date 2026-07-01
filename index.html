@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTL Tracking | Busqueda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#104d84',
+              navyDark: '#18243e',
+              cyan: '#20c3ef',
+              text: '#6f7480',
+              panel: '#d9d9dc'
+            }
+          },
+          boxShadow: {
+            modal: '0 2px 14px rgba(0, 0, 0, .12)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; }
+    .search-art {
+      background-image:
+        radial-gradient(circle at 17% 55%, rgba(110, 126, 168, .18) 0 52px, transparent 53px),
+        radial-gradient(circle at 35% 68%, rgba(110, 126, 168, .18) 0 54px, transparent 55px),
+        radial-gradient(circle at 73% 60%, rgba(110, 126, 168, .18) 0 60px, transparent 61px),
+        radial-gradient(circle at 86% 72%, rgba(110, 126, 168, .18) 0 54px, transparent 55px);
+      background-repeat: no-repeat;
+    }
+    select { -webkit-appearance: none; appearance: none; }
+  </style>
+</head>
+<body class="bg-white text-brand-text antialiased">
+
+<!-- Search states -->
+<main class="mx-auto min-h-screen max-w-[1366px] overflow-hidden bg-white">
+  <section class="px-4 pb-12 pt-[8px] sm:px-6 lg:px-0 lg:pb-16">
+    <div class="flex justify-center gap-[16px] text-brand-cyan">
+      <span class="h-0 w-0 border-b-[18px] border-l-[12px] border-r-[12px] border-b-brand-cyan border-l-transparent border-r-transparent"></span>
+      <span class="h-0 w-0 border-t-[18px] border-l-[12px] border-r-[12px] border-t-brand-cyan border-l-transparent border-r-transparent"></span>
+    </div>
+
+    <!-- Base card -->
+    <section id="card" class="relative mx-auto mt-[32px] min-h-0 max-w-[1366px] scroll-mt-10 overflow-hidden lg:mt-[44px] lg:min-h-[430px]">
+      <div class="absolute inset-x-0 top-[108px] h-[430px] bg-brand-panel sm:h-[360px] lg:left-[55px] lg:right-0 lg:top-[112px] lg:h-[224px]"></div>
+
+      <!-- Hero copy -->
+      <div class="relative z-10 mx-auto max-w-[640px] px-4 pb-12 pt-[160px] text-center sm:px-6 sm:pt-[150px] lg:absolute lg:left-[307px] lg:top-[180px] lg:mx-0 lg:max-w-[540px] lg:px-0 lg:pb-0 lg:pt-0 lg:text-left">
+        <h1 class="text-[42px] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-brand-navy sm:text-[52px] lg:text-[70px]">Move Together</h1>
+        <p class="mt-[16px] max-w-[540px] text-[18px] leading-[1.42] text-[#5c6470] sm:text-[19px] lg:mt-[22px] lg:text-[21px]">
+          En NTL seguimos sumando soluciones efectivas. Chequeá el estado de tus cargas,
+          detalles y documentación, simplemente ingresando BL O N° de Contendor.
+        </p>
+      </div>
+
+      <!-- Search card -->
+      <form action="pages/carga-maritima.html#maritima" class="search-art relative z-10 mx-auto mt-6 flex min-h-[320px] w-full max-w-[470px] flex-col bg-brand-navyDark px-6 pb-8 pt-8 text-white shadow-modal sm:px-8 lg:absolute lg:right-[158px] lg:top-[10px] lg:mt-0 lg:h-[356px] lg:w-[470px] lg:px-[60px] lg:pb-[30px] lg:pt-[62px]">
+        <label for="tracking-type" class="block text-[16px] font-bold leading-none">AWB No./BL No.</label>
+        <div class="mt-[22px] flex h-[56px] items-center bg-white text-[#8a8f97]">
+          <div class="flex h-full w-[52px] shrink-0 items-center justify-center text-brand-navy sm:w-[56px]">
+            <svg viewBox="0 0 24 24" class="h-[28px] w-[28px]" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-4-4"></path>
+            </svg>
+          </div>
+          <div class="relative flex h-full w-[126px] shrink-0 items-center border-r border-[#d3d4d8] sm:w-[138px]">
+            <select id="tracking-type" class="h-full w-full bg-transparent pl-[12px] pr-8 text-[15px] text-[#b8bbc0] outline-none sm:pl-[18px] sm:text-[17px]">
+              <option selected>N° Cont.</option>
+              <option>BL</option>
+            </select>
+            <span class="pointer-events-none absolute right-[16px] top-1/2 h-[11px] w-[11px] -translate-y-1/2 rotate-45 border-b border-r border-[#d2d4d7]"></span>
+          </div>
+          <input class="min-w-0 flex-1 px-3 text-[15px] text-slate-700 outline-none sm:px-4 sm:text-[16px]" value="" />
+        </div>
+        <div class="mt-auto flex justify-center pt-10 sm:justify-end sm:pr-[4px] lg:pt-0">
+          <button class="min-w-[144px] bg-brand-cyan px-[24px] py-[14px] text-[17px] font-bold uppercase tracking-[-0.01em] text-white">Buscar</button>
+        </div>
+      </form>
+
+      <!-- Pager dots -->
+      <div class="relative left-1/2 mt-8 flex w-fit -translate-x-1/2 gap-[30px] text-[#d7d7d7] lg:absolute lg:bottom-[8px] lg:mt-0">
+        <span class="h-[9px] w-[9px] rounded-full bg-current"></span>
+        <span class="h-[9px] w-[9px] rounded-full bg-current"></span>
+        <span class="h-[9px] w-[9px] rounded-full bg-current"></span>
+      </div>
+    </section>
+
+    <!-- Login overlay -->
+    <section id="login" class="relative mx-auto mt-[64px] min-h-[760px] max-w-[1366px] scroll-mt-10 overflow-hidden border-t border-[#efefef] pt-[24px] sm:min-h-[700px] lg:min-h-[430px] lg:pt-[6px]">
+      <div class="absolute inset-x-0 top-[122px] h-[430px] bg-brand-panel sm:h-[360px] lg:top-[134px] lg:h-[203px]"></div>
+      <div class="relative z-0 mx-auto max-w-[640px] px-4 pb-10 pt-[170px] text-center sm:px-6 sm:pt-[150px] lg:absolute lg:left-[228px] lg:top-[186px] lg:mx-0 lg:max-w-[545px] lg:px-0 lg:pb-0 lg:pt-0 lg:text-left">
+        <h2 class="text-[42px] font-bold uppercase leading-none tracking-[-0.05em] text-brand-navy opacity-[0.82] sm:text-[50px] lg:text-[61px]">Move Together</h2>
+        <p class="mt-[16px] max-w-[545px] text-[18px] leading-[1.46] text-[#5f6672] opacity-[0.82] lg:mt-[18px]">
+          En NTL seguimos sumando soluciones efectivas. Chequeá el estado de tus cargas,
+          detalles y documentación, simplemente ingresando BL O N° de Contendor.
+        </p>
+      </div>
+      <div class="search-art relative z-0 mx-auto mt-6 flex min-h-[320px] w-full max-w-[425px] flex-col bg-brand-navyDark px-6 pb-8 pt-8 text-white shadow-modal opacity-[0.98] sm:px-8 lg:absolute lg:right-[170px] lg:top-[71px] lg:mt-0 lg:h-[322px] lg:w-[425px] lg:px-[39px] lg:pb-[28px] lg:pt-[58px]">
+        <label class="block text-[16px] font-bold leading-none">AWB No./BL No.</label>
+        <div class="mt-[19px] flex h-[49px] items-center bg-white text-[#8a8f97]">
+          <div class="flex h-full w-[50px] shrink-0 items-center justify-center text-brand-navy">
+            <svg viewBox="0 0 24 24" class="h-[28px] w-[28px]" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-4-4"></path>
+            </svg>
+          </div>
+          <div class="relative flex h-full w-[111px] shrink-0 items-center border-r border-[#cfd1d5]">
+            <span class="pl-[17px] text-[15px] text-[#b2b5bc]">BL</span>
+            <span class="pointer-events-none absolute right-[18px] top-1/2 h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-b border-r border-[#d2d4d7]"></span>
+          </div>
+          <input class="min-w-0 flex-1 px-4 text-[15px] text-slate-700 outline-none" value="" />
+        </div>
+        <div class="mt-auto flex justify-center pt-10 sm:justify-end sm:pr-[27px] lg:pt-0">
+          <button class="min-w-[130px] bg-brand-cyan px-[20px] py-[12px] text-[17px] font-bold uppercase tracking-[-0.01em] text-white">Buscar</button>
+        </div>
+      </div>
+
+      <!-- Modal login -->
+      <div class="absolute left-1/2 top-[18px] z-20 w-[calc(100%-2rem)] max-w-[577px] -translate-x-1/2 bg-white px-6 pb-10 pt-6 text-center shadow-modal sm:px-10 lg:left-[400px] lg:top-[4px] lg:w-[577px] lg:translate-x-0 lg:px-[44px] lg:pb-[40px] lg:pt-[28px]">
+        <a href="#card" class="absolute right-[21px] top-[14px] text-[34px] leading-none text-[#d4d4d4]">×</a>
+        <div class="mx-auto flex h-[56px] w-[56px] items-center justify-center rounded-full border-[4px] border-brand-cyan text-[44px] leading-none text-brand-cyan">!</div>
+        <p class="mt-[22px] text-[18px] leading-[1.35] text-[#6f7480]">Para poder realizar esta consulta Ud. debe estar Logueado.</p>
+        <form action="#login" class="mx-auto mt-[40px] max-w-[198px] text-center text-[16px] italic text-[#94979d]">
+          <input class="w-full border-b border-[#adadb2] pb-[8px] text-center outline-none" placeholder="Ususario" />
+          <input class="mt-[32px] w-full border-b border-[#adadb2] pb-[8px] text-center outline-none" placeholder="Contraseña" type="password" />
+          <button class="mt-[34px] rounded-[10px] bg-brand-cyan px-[18px] py-[7px] text-[16px] font-normal uppercase not-italic text-white">Ingresar</button>
+        </form>
+        <p class="mt-[34px] text-[16px] text-[#777b81]">Si aún no tiene usuario <a href="#" class="text-brand-cyan underline">Contactarse</a></p>
+      </div>
+    </section>
+
+    <!-- Error overlay -->
+    <section id="error" class="relative mx-auto mt-[64px] min-h-[720px] max-w-[1366px] scroll-mt-10 overflow-hidden border-t border-[#efefef] pt-[24px] sm:min-h-[680px] lg:min-h-[430px] lg:pt-[6px]">
+      <div class="absolute inset-x-0 top-[122px] h-[430px] bg-brand-panel sm:h-[360px] lg:top-[134px] lg:h-[203px]"></div>
+      <div class="relative z-0 mx-auto max-w-[640px] px-4 pb-10 pt-[170px] text-center sm:px-6 sm:pt-[150px] lg:absolute lg:left-[228px] lg:top-[186px] lg:mx-0 lg:max-w-[545px] lg:px-0 lg:pb-0 lg:pt-0 lg:text-left">
+        <h2 class="text-[42px] font-bold uppercase leading-none tracking-[-0.05em] text-brand-navy opacity-[0.82] sm:text-[50px] lg:text-[61px]">Move Together</h2>
+        <p class="mt-[16px] max-w-[545px] text-[18px] leading-[1.46] text-[#5f6672] opacity-[0.82] lg:mt-[18px]">
+          En NTL seguimos sumando soluciones efectivas. Chequeá el estado de tus cargas,
+          detalles y documentación, simplemente ingresando BL O N° de Contendor.
+        </p>
+      </div>
+      <div class="search-art relative z-0 mx-auto mt-6 flex min-h-[320px] w-full max-w-[425px] flex-col bg-brand-navyDark px-6 pb-8 pt-8 text-white shadow-modal opacity-[0.98] sm:px-8 lg:absolute lg:right-[170px] lg:top-[71px] lg:mt-0 lg:h-[322px] lg:w-[425px] lg:px-[39px] lg:pb-[28px] lg:pt-[58px]">
+        <label class="block text-[16px] font-bold leading-none">AWB No./BL No.</label>
+        <div class="mt-[19px] flex h-[49px] items-center bg-white text-[#8a8f97]">
+          <div class="flex h-full w-[50px] shrink-0 items-center justify-center text-brand-navy">
+            <svg viewBox="0 0 24 24" class="h-[28px] w-[28px]" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-4-4"></path>
+            </svg>
+          </div>
+          <div class="relative flex h-full w-[111px] shrink-0 items-center border-r border-[#cfd1d5]">
+            <span class="pl-[17px] text-[15px] text-[#b2b5bc]">BL</span>
+            <span class="pointer-events-none absolute right-[18px] top-1/2 h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-b border-r border-[#d2d4d7]"></span>
+          </div>
+          <input class="min-w-0 flex-1 px-4 text-[15px] text-slate-700 outline-none" value="" />
+        </div>
+        <div class="mt-auto flex justify-center pt-10 sm:justify-end sm:pr-[27px] lg:pt-0">
+          <button class="min-w-[130px] bg-brand-cyan px-[20px] py-[12px] text-[17px] font-bold uppercase tracking-[-0.01em] text-white">Buscar</button>
+        </div>
+      </div>
+
+      <!-- Modal error -->
+      <div class="absolute left-1/2 top-[18px] z-20 w-[calc(100%-2rem)] max-w-[577px] -translate-x-1/2 bg-white px-6 pb-12 pt-6 text-center shadow-modal sm:px-10 lg:left-[400px] lg:top-[4px] lg:w-[577px] lg:translate-x-0 lg:px-[50px] lg:pb-[53px] lg:pt-[28px]">
+        <div class="mx-auto flex h-[56px] w-[56px] items-center justify-center rounded-full border-[4px] border-brand-cyan text-[44px] leading-none text-brand-cyan">!</div>
+        <p class="mx-auto mt-[26px] max-w-[430px] text-[18px] leading-[1.35] text-[#6f7480]">
+          Ud. ha ingresado un N° de BL erróneo. Verifique e intente
+          nuevamente. Si el problema persiste por favor <a href="#" class="text-brand-cyan underline">Contactarse</a>
+        </p>
+        <a href="#card" class="mt-[30px] inline-block rounded-[10px] bg-brand-cyan px-[25px] py-[7px] text-[16px] uppercase text-white">OK</a>
+      </div>
+    </section>
+  </section>
+</main>
+</body>
+</html>

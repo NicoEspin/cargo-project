@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTL Tracking | Mi perfil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#104d84',
+              cyan: '#20c3ef',
+              text: '#737880',
+              panel: '#e7e7e7',
+              line: '#f1f1f1'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-brand-text antialiased">
+
+<!-- Top navigation -->
+<header class="mx-auto max-w-[1366px] px-6 pb-[66px] pt-[58px] lg:px-0">
+  <nav class="mx-auto hidden max-w-[915px] items-end justify-between text-[18px] font-normal uppercase leading-none tracking-[-0.02em] text-[#6a6d72] lg:flex">
+    <a href="carga-maritima.html#maritima" class="pb-[10px]">Detalle de carga</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="otros-embarques.html" class="pb-[10px]">Otros embarques</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="estado-cuenta.html" class="pb-[10px]">Estado de cuenta</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="#mi-perfil" class="border-b-[4px] border-brand-cyan pb-[6px] text-brand-cyan">Mi perfil</a>
+  </nav>
+  <nav class="mx-auto max-w-[640px] text-[16px] font-normal uppercase leading-none tracking-[-0.02em] text-[#6a6d72] sm:text-[18px] lg:hidden">
+    <div class="flex items-end justify-center gap-5 sm:gap-7">
+      <a href="carga-maritima.html#maritima" class="pb-[8px]">Detalle de carga</a>
+      <span class="pb-[7px] text-[#919191]">|</span>
+      <a href="otros-embarques.html" class="pb-[8px]">Otros embarques</a>
+    </div>
+    <div class="mt-4 flex items-end justify-center gap-5 sm:gap-7">
+      <a href="estado-cuenta.html" class="pb-[8px]">Estado de cuenta</a>
+      <span class="pb-[7px] text-[#919191]">|</span>
+      <a href="#mi-perfil" class="border-b-[4px] border-brand-cyan pb-[6px] text-brand-cyan">Mi perfil</a>
+    </div>
+  </nav>
+</header>
+
+<main id="mi-perfil" class="mx-auto max-w-[1366px] px-6 pb-16 lg:px-0">
+  <!-- Company banner -->
+  <section class="mx-auto max-w-[585px] bg-brand-navy px-[24px] py-[19px] text-white">
+    <div class="flex items-center gap-[32px]">
+      <div class="flex h-[60px] w-[60px] items-center justify-center rounded-full border-[3px] border-white">
+        <svg viewBox="0 0 24 24" class="h-11 w-11" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="12" cy="8" r="4.1"></circle>
+          <path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"></path>
+        </svg>
+      </div>
+      <h1 class="text-[22px] tracking-[0.01em]">Nombre de la Empresa</h1>
+    </div>
+  </section>
+
+  <!-- Account data -->
+  <section class="mx-auto mt-[30px] max-w-[585px] bg-brand-panel px-[28px] py-[18px]">
+    <h2 class="text-[18px] font-normal uppercase text-brand-navy">Datos de cuenta</h2>
+    <div class="mt-[18px] space-y-[10px] text-[16px] leading-[1.25]">
+      <p class="border-b border-brand-line pb-[8px]">Razón Social:</p>
+      <p class="border-b border-brand-line pb-[8px]">Responsable:</p>
+      <p class="border-b border-brand-line pb-[8px]">E-mail:</p>
+      <p>Telefono:</p>
+    </div>
+  </section>
+
+  <!-- Tax data -->
+  <section class="mx-auto mt-[32px] max-w-[585px] bg-brand-panel px-[28px] py-[18px]">
+    <h2 class="text-[18px] font-normal uppercase text-brand-navy">Datos fiscales</h2>
+    <div class="mt-[18px] space-y-[10px] text-[16px] leading-[1.25]">
+      <p class="border-b border-brand-line pb-[8px]">Condición Impositiva:</p>
+      <p class="border-b border-brand-line pb-[8px]">Domicilio Fiscal</p>
+      <p>Cuit:</p>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="mx-auto mt-[22px] max-w-[585px] bg-brand-panel px-[28px] pb-[30px] pt-[18px]">
+    <h2 class="text-[18px] font-normal uppercase text-brand-navy">Datos de contacto</h2>
+
+    <div class="mt-[18px] space-y-[8px] text-[16px] leading-[1.25]">
+      <p class="flex items-center justify-between border-b border-brand-line pb-[8px]"><span>Nombre:</span><span class="text-[#2f353d]"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"></path><path d="m16.5 3.5 4 4L7 21H3v-4z"></path></svg></span></p>
+      <p class="flex items-center justify-between border-b border-brand-line pb-[8px]"><span>Telefono:</span><span class="text-[#2f353d]"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"></path><path d="m16.5 3.5 4 4L7 21H3v-4z"></path></svg></span></p>
+      <p class="flex items-center justify-between border-b border-brand-line pb-[8px]"><span>Puesto:</span><span class="text-[#2f353d]"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"></path><path d="m16.5 3.5 4 4L7 21H3v-4z"></path></svg></span></p>
+      <div class="flex flex-wrap gap-[38px] border-b border-[#89919a] pb-[10px] pt-[4px]">
+        <span>Administrativo <span class="ml-[2px] inline-block h-[13px] w-[13px] rounded-[2px] bg-white align-middle"></span></span>
+        <span>Operativo <span class="ml-[2px] inline-block h-[13px] w-[13px] rounded-[2px] bg-white align-middle"></span></span>
+      </div>
+    </div>
+
+    <div class="mt-[14px] space-y-[8px] text-[16px] leading-[1.25]">
+      <p class="flex items-center justify-between border-b border-brand-line pb-[8px]"><span>Nombre:</span><span class="text-[#2f353d]"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"></path><path d="m16.5 3.5 4 4L7 21H3v-4z"></path></svg></span></p>
+      <p class="flex items-center justify-between border-b border-brand-line pb-[8px]"><span>Telefono:</span><span class="text-[#2f353d]"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"></path><path d="m16.5 3.5 4 4L7 21H3v-4z"></path></svg></span></p>
+      <p class="flex items-center justify-between border-b border-brand-line pb-[8px]"><span>Puesto:</span><span class="text-[#2f353d]"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"></path><path d="m16.5 3.5 4 4L7 21H3v-4z"></path></svg></span></p>
+      <div class="flex flex-wrap gap-[38px] pt-[4px]">
+        <span>Administrativo <span class="ml-[2px] inline-block h-[13px] w-[13px] rounded-[2px] bg-white align-middle"></span></span>
+        <span>Operativo <span class="ml-[2px] inline-block h-[13px] w-[13px] rounded-[2px] bg-white align-middle"></span></span>
+      </div>
+    </div>
+
+    <p class="mt-[18px] text-[15px] italic text-[#7d8086]">+ Agregar persona de contacto</p>
+  </section>
+</main>
+</body>
+</html>

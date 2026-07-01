@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTL Tracking | Estado de cuenta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#104d84',
+              cyan: '#20c3ef',
+              text: '#6f7480',
+              panel: '#e7e7e7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-brand-text antialiased">
+
+<!-- Top navigation -->
+<header class="mx-auto max-w-[1366px] px-6 pb-[66px] pt-[58px] lg:px-0">
+  <nav class="mx-auto hidden max-w-[915px] items-end justify-between text-[18px] font-normal uppercase leading-none tracking-[-0.02em] text-[#6a6d72] lg:flex">
+    <a href="carga-maritima.html#maritima" class="pb-[10px]">Detalle de carga</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="otros-embarques.html" class="pb-[10px]">Otros embarques</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="#estado-cuenta" class="border-b-[4px] border-brand-cyan pb-[6px] text-brand-cyan">Estado de cuenta</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="mi-perfil.html" class="pb-[10px]">Mi perfil</a>
+  </nav>
+  <nav class="mx-auto max-w-[640px] text-[16px] font-normal uppercase leading-none tracking-[-0.02em] text-[#6a6d72] sm:text-[18px] lg:hidden">
+    <div class="flex items-end justify-center gap-5 sm:gap-7">
+      <a href="carga-maritima.html#maritima" class="pb-[8px]">Detalle de carga</a>
+      <span class="pb-[7px] text-[#919191]">|</span>
+      <a href="otros-embarques.html" class="pb-[8px]">Otros embarques</a>
+    </div>
+    <div class="mt-4 flex items-end justify-center gap-5 sm:gap-7">
+      <a href="#estado-cuenta" class="border-b-[4px] border-brand-cyan pb-[6px] text-brand-cyan">Estado de cuenta</a>
+      <span class="pb-[7px] text-[#919191]">|</span>
+      <a href="mi-perfil.html" class="pb-[8px]">Mi perfil</a>
+    </div>
+  </nav>
+</header>
+
+<main id="estado-cuenta" class="mx-auto max-w-[1366px] px-4 pb-12 sm:px-6 lg:px-0 lg:pb-16">
+  <!-- Account table -->
+  <section class="mx-auto max-w-[915px] bg-brand-panel px-4 py-5 sm:px-6 sm:py-6 lg:px-[38px] lg:py-[24px]">
+      <table class="hidden w-full table-fixed text-left text-[14px] leading-[1.15] tracking-[-0.01em] lg:table">
+        <thead class="border-b border-white text-brand-navy">
+          <tr class="uppercase">
+            <th class="pb-[17px]">Fecha de emisión</th>
+            <th class="pb-[17px]">N° Factura</th>
+            <th class="pb-[17px]">Tipo</th>
+            <th class="pb-[17px]">Referencia</th>
+            <th class="pb-[17px]">Imp. Adeudado</th>
+            <th class="pb-[17px]">Fecha de Venc.</th>
+            <th class="pb-[17px]">Vence en</th>
+            <th class="pb-[17px]"></th>
+          </tr>
+        </thead>
+        <tbody class="text-[#81858c]">
+          <tr class="border-b border-white">
+            <td class="py-[8px]"></td><td></td><td></td><td></td><td></td><td></td>
+            <td class="font-normal uppercase text-[#35c75f]">15 dias</td>
+            <td class="w-[34px] text-right text-brand-navy">
+              <svg viewBox="0 0 24 24" class="ml-auto h-[29px] w-[29px]" fill="none" stroke="currentColor" stroke-width="1.45"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+            </td>
+          </tr>
+          <tr class="border-b border-white">
+            <td class="py-[8px]"></td><td></td><td></td><td></td><td></td><td></td>
+            <td class="font-normal uppercase text-[#6ecf60]">10 dias</td>
+            <td class="w-[34px] text-right text-brand-navy">
+              <svg viewBox="0 0 24 24" class="ml-auto h-[29px] w-[29px]" fill="none" stroke="currentColor" stroke-width="1.45"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+            </td>
+          </tr>
+          <tr class="border-b border-white">
+            <td class="py-[8px]"></td><td></td><td></td><td></td><td></td><td></td>
+            <td class="font-normal uppercase text-[#efb14a]">5 dias</td>
+            <td class="w-[34px] text-right text-brand-navy">
+              <svg viewBox="0 0 24 24" class="ml-auto h-[29px] w-[29px]" fill="none" stroke="currentColor" stroke-width="1.45"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+            </td>
+          </tr>
+          <tr>
+            <td class="py-[8px]"></td><td></td><td></td><td></td><td></td><td></td>
+            <td class="font-normal uppercase text-[#ea4540]">Vencida</td>
+            <td class="w-[34px] text-right text-brand-navy">
+              <svg viewBox="0 0 24 24" class="ml-auto h-[29px] w-[29px]" fill="none" stroke="currentColor" stroke-width="1.45"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="space-y-4 lg:hidden">
+        <article class="border-b border-white pb-4 text-[15px] leading-[1.38] text-[#767b83]">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[13px] uppercase tracking-[0.08em] text-brand-navy">Comprobante</p>
+              <p class="mt-1">Sin datos cargados</p>
+            </div>
+            <svg viewBox="0 0 24 24" class="h-7 w-7 shrink-0 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.45"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+          </div>
+          <p class="mt-3"><span class="font-semibold text-brand-navy">Vence en:</span> <span class="uppercase text-[#35c75f]">15 dias</span></p>
+        </article>
+
+        <article class="border-b border-white pb-4 text-[15px] leading-[1.38] text-[#767b83]">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[13px] uppercase tracking-[0.08em] text-brand-navy">Comprobante</p>
+              <p class="mt-1">Sin datos cargados</p>
+            </div>
+            <svg viewBox="0 0 24 24" class="h-7 w-7 shrink-0 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.45"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+          </div>
+          <p class="mt-3"><span class="font-semibold text-brand-navy">Vence en:</span> <span class="uppercase text-[#6ecf60]">10 dias</span></p>
+        </article>
+
+        <article class="border-b border-white pb-4 text-[15px] leading-[1.38] text-[#767b83]">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[13px] uppercase tracking-[0.08em] text-brand-navy">Comprobante</p>
+              <p class="mt-1">Sin datos cargados</p>
+            </div>
+            <svg viewBox="0 0 24 24" class="h-7 w-7 shrink-0 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.45"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+          </div>
+          <p class="mt-3"><span class="font-semibold text-brand-navy">Vence en:</span> <span class="uppercase text-[#efb14a]">5 dias</span></p>
+        </article>
+
+        <article class="text-[15px] leading-[1.38] text-[#767b83]">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[13px] uppercase tracking-[0.08em] text-brand-navy">Comprobante</p>
+              <p class="mt-1">Sin datos cargados</p>
+            </div>
+            <svg viewBox="0 0 24 24" class="h-7 w-7 shrink-0 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.45"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+          </div>
+          <p class="mt-3"><span class="font-semibold text-brand-navy">Vence en:</span> <span class="uppercase text-[#ea4540]">Vencida</span></p>
+        </article>
+      </div>
+  </section>
+
+  <!-- Debt summary -->
+  <section class="mx-auto mt-[14px] max-w-[915px] text-[18px] leading-[1.5] tracking-[-0.01em] text-[#1b2a43] sm:text-[20px] lg:text-[21px]">
+    <p>DEUDA POR VENCER: $ 123456</p>
+    <p class="text-[#df4141]">DEUDA POR VENCIDA: $ 123456</p>
+  </section>
+
+  <!-- Total card -->
+  <section class="mx-auto mt-[14px] max-w-[915px]">
+    <div class="max-w-full bg-brand-navy px-4 py-4 text-[16px] uppercase tracking-[0.01em] text-white sm:px-5 sm:text-[17px] lg:max-w-[580px] lg:px-[21px] lg:py-[16px] lg:text-[18px]">
+      TOTAL ADEUDADO A LA FECHA: $ 12345660
+    </div>
+  </section>
+</main>
+</body>
+</html>

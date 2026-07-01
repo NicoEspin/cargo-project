@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTL Tracking | Otros embarques</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#104d84',
+              cyan: '#20c3ef',
+              text: '#6f7480',
+              line: '#ededed',
+              panel: '#e7e7e7',
+              green: '#39c65d',
+              teal: '#6bcfe7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-brand-text antialiased">
+
+<!-- Top navigation -->
+<header class="mx-auto max-w-[1366px] px-6 pb-[64px] pt-[56px] lg:px-0">
+  <nav class="mx-auto hidden max-w-[1036px] items-end justify-between text-[18px] font-normal uppercase leading-none tracking-[-0.02em] text-[#696c72] lg:flex">
+    <a href="carga-maritima.html#maritima" class="pb-[10px]">Detalle de carga</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="#listado" class="border-b-[4px] border-brand-cyan pb-[6px] text-brand-cyan">Otros embarques</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="estado-cuenta.html" class="pb-[10px]">Estado de cuenta</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="mi-perfil.html" class="pb-[10px]">Mi perfil</a>
+  </nav>
+  <nav class="mx-auto max-w-[640px] text-[16px] font-normal uppercase leading-none tracking-[-0.02em] text-[#696c72] sm:text-[18px] lg:hidden">
+    <div class="flex items-end justify-center gap-5 sm:gap-7">
+      <a href="carga-maritima.html#maritima" class="pb-[8px]">Detalle de carga</a>
+      <span class="pb-[7px] text-[#919191]">|</span>
+      <a href="#listado" class="border-b-[4px] border-brand-cyan pb-[6px] text-brand-cyan">Otros embarques</a>
+    </div>
+    <div class="mt-4 flex items-end justify-center gap-5 sm:gap-7">
+      <a href="estado-cuenta.html" class="pb-[8px]">Estado de cuenta</a>
+      <span class="pb-[7px] text-[#919191]">|</span>
+      <a href="mi-perfil.html" class="pb-[8px]">Mi perfil</a>
+    </div>
+  </nav>
+</header>
+
+<main class="mx-auto max-w-[1366px] px-4 pb-12 sm:px-6 lg:px-0 lg:pb-16">
+  <!-- Filled state -->
+  <section id="listado" class="mx-auto max-w-[1036px] scroll-mt-10">
+    <div class="bg-brand-panel px-4 py-5 sm:px-6 sm:py-6 lg:px-[55px] lg:py-[39px]">
+      <div class="hidden space-y-0 text-[12px] leading-none tracking-[-0.01em] text-[#777b81] lg:block">
+        <div class="grid grid-cols-[138px_177px_177px_152px_101px_30px] items-center border-b border-white pb-[10px]">
+          <div class="uppercase text-brand-navy">BL</div>
+          <div>2205 - 24783</div>
+          <div>Terminal: Exolgan</div>
+          <div>ETA 21/12/2022</div>
+          <div class="font-bold uppercase tracking-[-0.01em] text-brand-green">Arribado</div>
+          <a href="carga-maritima.html#maritima" class="justify-self-end uppercase text-brand-navy underline decoration-[1px] underline-offset-[4px]">Ver</a>
+        </div>
+        <div class="grid grid-cols-[138px_177px_177px_152px_101px_30px] items-center border-b border-white py-[9px]">
+          <div class="uppercase text-brand-navy">Arribos</div>
+          <div>MAIPO V.2246</div>
+          <div>Terminal: Exolgan</div>
+          <div>ETA 21/12/2022</div>
+          <div class="font-bold uppercase tracking-[-0.01em] text-brand-teal">Esperado</div>
+          <a href="carga-maritima.html#aerea" class="justify-self-end uppercase text-brand-navy underline decoration-[1px] underline-offset-[4px]">Ver</a>
+        </div>
+        <div class="grid grid-cols-[138px_177px_177px_152px_101px_30px] items-center pt-[9px]">
+          <div class="uppercase text-brand-navy">Arribos</div>
+          <div>MAIPO V.2246</div>
+          <div>Terminal: Exolgan</div>
+          <div>ETA 21/12/2022</div>
+          <div class="font-bold uppercase tracking-[-0.01em] text-brand-green">Arribado</div>
+          <a href="carga-maritima.html#terrestre" class="justify-self-end uppercase text-brand-navy underline decoration-[1px] underline-offset-[4px]">Ver</a>
+        </div>
+      </div>
+
+      <div class="space-y-4 lg:hidden">
+        <article class="border-b border-white pb-4 text-[15px] leading-[1.35] text-[#6f7480]">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[13px] uppercase tracking-[0.08em] text-brand-navy">BL</p>
+              <p class="mt-1">2205 - 24783</p>
+            </div>
+            <a href="carga-maritima.html#maritima" class="shrink-0 text-[13px] uppercase text-brand-navy underline underline-offset-[4px]">Ver</a>
+          </div>
+          <p class="mt-3">Terminal: Exolgan</p>
+          <p class="mt-1">ETA 21/12/2022</p>
+          <p class="mt-2 text-[13px] font-bold uppercase tracking-[0.08em] text-brand-green">Arribado</p>
+        </article>
+
+        <article class="border-b border-white pb-4 text-[15px] leading-[1.35] text-[#6f7480]">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[13px] uppercase tracking-[0.08em] text-brand-navy">Arribos</p>
+              <p class="mt-1">MAIPO V.2246</p>
+            </div>
+            <a href="carga-maritima.html#aerea" class="shrink-0 text-[13px] uppercase text-brand-navy underline underline-offset-[4px]">Ver</a>
+          </div>
+          <p class="mt-3">Terminal: Exolgan</p>
+          <p class="mt-1">ETA 21/12/2022</p>
+          <p class="mt-2 text-[13px] font-bold uppercase tracking-[0.08em] text-brand-teal">Esperado</p>
+        </article>
+
+        <article class="text-[15px] leading-[1.35] text-[#6f7480]">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[13px] uppercase tracking-[0.08em] text-brand-navy">Arribos</p>
+              <p class="mt-1">MAIPO V.2246</p>
+            </div>
+            <a href="carga-maritima.html#terrestre" class="shrink-0 text-[13px] uppercase text-brand-navy underline underline-offset-[4px]">Ver</a>
+          </div>
+          <p class="mt-3">Terminal: Exolgan</p>
+          <p class="mt-1">ETA 21/12/2022</p>
+          <p class="mt-2 text-[13px] font-bold uppercase tracking-[0.08em] text-brand-green">Arribado</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empty state -->
+  <section class="mx-auto mt-[56px] max-w-[1036px] scroll-mt-10 lg:mt-[76px]">
+    <div class="bg-brand-panel min-h-0 px-4 py-6 text-[15px] leading-[1.4] text-[#7d8086] sm:px-6 sm:py-8 lg:min-h-[126px] lg:px-[30px] lg:py-[35px] lg:text-[13px] lg:leading-[1.18] lg:tracking-[-0.01em]">
+      <div class="flex flex-col items-start gap-4 sm:flex-row sm:gap-6 lg:gap-[52px] lg:pl-[1px] lg:pt-[1px]">
+        <div class="pt-[1px] text-brand-cyan">
+          <svg viewBox="0 0 24 24" class="h-[26px] w-[26px]" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 10v6"></path>
+            <circle cx="12" cy="7" r="1"></circle>
+          </svg>
+        </div>
+        <p class="max-w-[458px] pt-[1px]">
+          Ud. no posee búsquedas anteriores, para realizar un Búsqueda de BL
+          ingrese <a href="../index.html" class="text-brand-cyan underline">aquí</a>. Para buscar el estado de un buque ingrese
+          <a href="carga-maritima.html#maritima" class="text-brand-cyan underline">aquí</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
