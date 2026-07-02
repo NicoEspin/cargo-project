@@ -63,10 +63,11 @@
 
 <main class="mx-auto max-w-[1366px] px-4 pb-12 sm:px-6 lg:px-0 lg:pb-16">
   <!-- Variant: Maritima -->
-  <section id="maritima" class="mx-auto max-w-[1234px] scroll-mt-10">
-    <div class="grid gap-4 lg:gap-[15px] lg:grid-cols-[430px_1fr]">
+  <section id="maritima" class="relative mx-auto max-w-[1234px] scroll-mt-10">
+    <div class="pointer-events-none absolute left-[-100vw] top-[83px] hidden h-[243px] w-[300vw] bg-brand-panel lg:block"></div>
+    <div class="relative z-10 grid gap-4 lg:gap-[15px] lg:grid-cols-[430px_1fr]">
       <!-- Side panel -->
-      <aside class="bg-brand-navyDark px-5 pb-6 pt-5 text-white sm:px-6 lg:px-[29px] lg:pb-[34px] lg:pt-[21px]">
+      <aside class="relative z-10 bg-brand-navyDark px-5 pb-6 pt-5 text-white sm:px-6 lg:px-[29px] lg:pb-[34px] lg:pt-[21px]">
         <p class="text-[15px] leading-none text-[#d9ecf6]">BL / N° CONTENEDOR</p>
         <form action="#maritima" class="mt-4 space-y-3 text-[#8a8f97] lg:mt-[16px] lg:space-y-0">
           <div class="flex h-[45px] items-center bg-white lg:pr-[10px]">
@@ -104,7 +105,7 @@
           <p><span class="font-bold uppercase">Fecha libre:</span> 29/08/22</p>
           <p><span class="font-bold uppercase">Terminal devolucion:</span> TERMINAL SUR</p>
           <p class="flex items-center gap-2"><span class="font-bold uppercase">Libre deuda:</span>
-            <svg viewBox="0 0 24 24" class="h-[22px] w-[22px] text-white" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+            <img src="../assets/icons/descarga-estado.svg" alt="Descarga de estado" class="h-[22px] w-[22px] text-white" />
           </p>
         </div>
       </aside>
@@ -124,28 +125,28 @@
           </div>
         </div>
 
-        <section class="bg-brand-panel px-4 py-5 sm:px-6 lg:px-[42px] lg:py-[19px]">
-          <div class="flex justify-center">
+        <section class="relative z-0 bg-brand-panel px-4 py-5 sm:px-6 lg:mt-[15px] lg:bg-transparent lg:py-[19px] lg:px-[42px]">
+          <div class="relative z-10 flex justify-center">
             <img src="../assets/img/maersk-logo.png" alt="Maersk" class="h-[50px] w-[148px] object-contain" />
           </div>
-          <div class="mt-5 grid items-start gap-8 lg:mt-[20px] lg:gap-5 lg:grid-cols-[1fr_250px_1fr]">
+          <div class="relative z-10 mt-5 grid items-start gap-8 lg:mt-[20px] lg:gap-5 lg:grid-cols-[1fr_250px_1fr]">
             <div class="justify-self-center text-center text-brand-navy">
-              <svg viewBox="0 0 64 64" class="mx-auto h-[46px] w-[46px]" fill="currentColor"><path d="M10 34h20l7-8h9l8 8v4H10z"></path><path d="M14 30h8v-7h4v7h8v-12l-5 2-3-5-3 5-9-3z"></path><path d="M12 42h40v4H12z"></path></svg>
-              <p class="mt-[8px] text-[15px] text-[#33445b]">Fecha embarque: 12/04/19</p>
+              <img src="../assets/icons/barco-carga.svg" alt="Barco" class="mx-auto h-[46px] w-[46px] object-contain" />
+              <p class="mt-[8px] text-[15px] text-brand-navy">Fecha embarque: 12/04/19</p>
               <p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-arg inline-block h-[11px] w-[15px]"></span>Argentina, 01, AR</p>
-              <p class="mt-[5px] text-[16px] text-[#33445b]">Exolgan / Terminal 4</p>
+              <p class="mt-[5px] text-[16px] text-brand-navy">Exolgan / Terminal 4</p>
             </div>
             <div class="order-3 flex items-center justify-center gap-3 self-center text-center text-[15px] text-brand-text lg:order-none lg:gap-[15px] lg:pt-[14px] lg:text-[16px]"><span class="hidden h-px w-[137px] bg-white lg:block"></span><span>Directo</span><span class="hidden h-px w-[137px] bg-white lg:block"></span></div>
             <div class="justify-self-center text-center text-brand-navy">
-              <svg viewBox="0 0 64 64" class="mx-auto h-[46px] w-[46px]" fill="currentColor"><path d="M10 34h20l7-8h9l8 8v4H10z"></path><path d="M14 30h8v-7h4v7h8v-12l-5 2-3-5-3 5-9-3z"></path><path d="M12 42h40v4H12z"></path></svg>
-              <p class="mt-[8px] text-[15px] text-[#33445b]">Fecha de Arribo: 12/04/19</p>
+              <img src="../assets/icons/barco-carga.svg" alt="Barco" class="mx-auto h-[46px] w-[46px] object-contain" />
+              <p class="mt-[8px] text-[15px] text-brand-navy">Fecha de Arribo: 12/04/19</p>
               <p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-bel inline-block h-[11px] w-[15px]"></span>Antwerp, 01, BE</p>
-              <p class="mt-[5px] text-[16px] text-[#33445b]">Exolgan / Terminal 4</p>
+              <p class="mt-[5px] text-[16px] text-brand-navy">Exolgan / Terminal 4</p>
             </div>
           </div>
         </section>
 
-        <section class="mt-4 grid gap-4 lg:mt-[20px] lg:gap-[17px] lg:grid-cols-[1fr_216px]">
+        <section class="mt-4 grid gap-4 lg:mt-[15px] lg:gap-[15px] lg:grid-cols-[1fr_216px]">
           <article class="bg-brand-panel px-4 pb-5 pt-4 text-center text-brand-navy sm:px-6 lg:px-[24px] lg:pb-[22px] lg:pt-[15px]">
             <h2 class="text-[18px] font-bold uppercase tracking-[-0.01em]">Tipo de carga : FCL</h2>
             <table class="mt-[13px] hidden w-full table-fixed text-left text-[13px] leading-[1.2] tracking-[-0.01em] text-[#6b7078] md:table">
@@ -160,9 +161,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="border-b border-white"><td class="py-[11px]">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
-                <tr class="border-b border-white"><td class="py-[11px]">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
-                <tr><td class="py-[11px]">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
+                <tr class="border-b border-white text-brand-navy"><td class="py-[11px]">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
+                <tr class="border-b border-white text-brand-navy"><td class="py-[11px]">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
+                <tr class="text-brand-navy"><td class="py-[11px] ">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
               </tbody>
             </table>
             <div class="space-y-3 text-left text-[14px] leading-[1.35] text-[#6b7078] md:hidden">
@@ -192,7 +193,7 @@
               </article>
             </div>
             <div class="mt-[13px] flex items-center justify-center gap-[8px] text-[#747981]">
-              <svg viewBox="0 0 12 8" class="h-[8px] w-[12px]" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 12 8" class="h-[8px] w-[12px]" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M1 6.5 6 1.5l5 5" />
               </svg>
               <svg viewBox="0 0 12 8" class="h-[8px] w-[12px]" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
@@ -200,13 +201,13 @@
               </svg>
             </div>
           </article>
-          <article class="bg-brand-panel px-4 pb-5 pt-5 text-[15px] leading-[1.82] text-[#676d76] sm:px-5 lg:px-[12px] lg:pb-[16px] lg:pt-[18px]">
-            <h2 class="mb-[10px] text-center text-[18px] font-bold uppercase text-brand-navy">Malvina</h2>
-            <p><span class="font-bold text-brand-navy">Nro. Mani:</span> 016026Y</p>
-            <p><span class="font-bold text-brand-navy">Puerto SIM:</span> CNSGH</p>
-            <p><span class="font-bold text-brand-navy">Fecha registro:</span> 02/02/2023</p>
-            <p><span class="font-bold text-brand-navy">Fecha presentación:</span> 02/02/2023</p>
-            <p><span class="font-bold text-brand-navy">Fecha cierre:</span> 02/02/2023</p>
+          <article class="bg-brand-panel px-4 pb-5 pt-4 text-[15px] leading-[1.35] text-brand-navy sm:px-5 lg:px-[12px] lg:pb-[16px] lg:pt-[14px]">
+            <h2 class="mb-[14px] text-center text-[18px] font-bold uppercase text-brand-navy">Malvina</h2>
+            <p><span class="font-bold text-brand-navy">Nro. Mani:</span> <span class="text-brand-navy">016026Y</span></p>
+            <p class="mt-[10px]"><span class="font-bold text-brand-navy">Puerto SIM:</span> <span class="text-brand-navy">CNSGH</span></p>
+            <p class="mt-[10px]"><span class="font-bold text-brand-navy">Fecha registro:</span> <span class="text-brand-navy">02/02/2023</span></p>
+            <p class="mt-[10px]"><span class="font-bold text-brand-navy">Fecha presentación:</span> <span class="text-brand-navy">02/02/2023</span></p>
+            <p class="mt-[10px]"><span class="font-bold text-brand-navy">Fecha cierre:</span> <span class="text-brand-navy">02/02/2023</span></p>
           </article>
         </section>
       </div>
@@ -214,9 +215,10 @@
   </section>
 
   <!-- Variant: Aerea -->
-  <section id="aerea" class="mx-auto mt-[58px] max-w-[1234px] scroll-mt-10 border-t border-brand-line pt-[24px]">
-    <div class="grid gap-4 lg:gap-[15px] lg:grid-cols-[430px_1fr]">
-      <aside class="bg-brand-navyDark px-5 pb-6 pt-5 text-white sm:px-6 lg:px-[29px] lg:pb-[34px] lg:pt-[21px]">
+  <section id="aerea" class="relative mx-auto mt-[58px] max-w-[1234px] scroll-mt-10 border-t border-brand-line pt-[24px]">
+    <div class="pointer-events-none absolute left-[-100vw] top-[107px] hidden h-[243px] w-[300vw] bg-brand-panel lg:block"></div>
+    <div class="relative z-10 grid gap-4 lg:gap-[15px] lg:grid-cols-[430px_1fr]">
+      <aside class="relative z-10 bg-brand-navyDark px-5 pb-6 pt-5 text-white sm:px-6 lg:px-[29px] lg:pb-[34px] lg:pt-[21px]">
         <div class="mt-[2px] space-y-3 text-[#8a8f97] lg:space-y-0">
           <div class="flex h-[45px] items-center bg-white lg:pr-[10px]">
             <div class="flex w-[44px] shrink-0 justify-center text-brand-navyDark sm:w-[48px]"><svg viewBox="0 0 24 24" class="h-[27px] w-[27px]" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></div>
@@ -239,7 +241,7 @@
           <div><dt class="inline font-bold uppercase">Incoterm:</dt> <dd class="inline">FOB</dd></div>
           <div><dt class="inline font-bold uppercase">Seguro:</dt> <dd class="inline">SI <span class="ml-[7px] inline-block h-[11px] w-[11px] rotate-45 border-b-2 border-r-2 border-white align-middle"></span></dd></div>
           <div class="flex items-center gap-2"><dt class="inline font-bold uppercase">Libre deuda:</dt>
-            <svg viewBox="0 0 24 24" class="h-[22px] w-[22px] text-white" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+            <img src="../assets/icons/descarga-estado.svg" alt="Descarga de estado" class="h-[22px] w-[22px]" />
           </div>
         </dl>
       </aside>
@@ -247,56 +249,60 @@
         <div class="flex min-h-[68px] flex-col items-start gap-3 bg-brand-navyDark px-4 py-4 text-white sm:px-5 lg:flex-row lg:items-center lg:justify-between lg:px-[20px] lg:py-0">
           <div class="flex items-center gap-[17px] text-[19px] font-bold uppercase"><span class="h-[31px] w-[31px] rounded-full bg-brand-green"></span><span>Estado: Arribado</span></div>
         </div>
-        <section class="bg-brand-panel px-4 py-5 sm:px-6 lg:px-[42px] lg:py-[19px]">
-          <div class="flex justify-center"><img src="../assets/img/maersk-logo.png" alt="Maersk" class="h-[50px] w-[148px] object-contain" /></div>
-          <div class="mt-5 grid items-start gap-8 lg:mt-[21px] lg:gap-4 lg:grid-cols-[1fr_268px_1fr]">
+        <section class="relative z-0 bg-brand-panel px-4 py-5 sm:px-6 lg:mt-[15px] lg:bg-transparent lg:px-[42px] lg:py-[19px]">
+          <div class="relative z-10 flex justify-center"><img src="../assets/img/maersk-logo.png" alt="Maersk" class="h-[50px] w-[148px] object-contain" /></div>
+          <div class="relative z-10 mt-5 grid items-start gap-8 lg:mt-[20px] lg:gap-4 lg:grid-cols-[1fr_268px_1fr]">
             <div class="justify-self-center text-center text-brand-navy">
-              <svg viewBox="0 0 64 64" class="mx-auto h-[48px] w-[48px]" fill="currentColor"><path d="M8 33h23l8-10h8l-6 10h15l-6 4H41l-7 8H18l-2-8H8z"></path><path d="M15 26l7-7h8l-5 7z"></path><path d="M16 44h12"></path></svg>
-              <p class="mt-[8px] text-[15px] text-[#33445b]">Fecha embarque: 12/04/19</p>
+              <img src="../assets/icons/avion-carga.svg" alt="Avion" class="mx-auto h-[48px] w-[48px] object-contain" />
+              <p class="mt-[8px] text-[15px] text-brand-navy">Fecha embarque: 12/04/19</p>
               <p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-arg inline-block h-[11px] w-[15px]"></span>Argentina, 01, AR</p>
-              <p class="mt-[5px] text-[16px] text-[#33445b]">Exolgan / Terminal 4</p>
+              <p class="mt-[5px] text-[16px] text-brand-navy">Exolgan / Terminal 4</p>
             </div>
             <div class="order-3 self-center text-center text-[15px] leading-[1.3] text-brand-text lg:order-none lg:text-[16px] lg:leading-[1.2]">
               <div class="mx-auto flex max-w-[228px] items-center gap-[14px] pt-[8px]"><span class="hidden h-px w-[60px] bg-white lg:block"></span><span>Trasbordo 12/04/19</span><span class="hidden h-px w-[60px] bg-white lg:block"></span></div>
               <p class="mt-[2px] text-[17px] font-bold text-brand-navy">Antwerp, 01, BE</p>
             </div>
             <div class="justify-self-center text-center text-brand-navy">
-              <svg viewBox="0 0 64 64" class="mx-auto h-[48px] w-[48px]" fill="currentColor"><path d="M8 33h23l8-10h8l-6 10h15l-6 4H41l-7 8H18l-2-8H8z"></path><path d="M15 26l7-7h8l-5 7z"></path><path d="M16 44h12"></path></svg>
-              <p class="mt-[8px] text-[15px] text-[#33445b]">Fecha de Arribo: 15/04/19</p>
+              <img src="../assets/icons/avion-carga.svg" alt="Avion" class="mx-auto h-[48px] w-[48px] object-contain" />
+              <p class="mt-[8px] text-[15px] text-brand-navy">Fecha de Arribo: 15/04/19</p>
               <p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-bel inline-block h-[11px] w-[15px]"></span>Antwerp, 01, BE</p>
-              <p class="mt-[5px] text-[16px] text-[#33445b]">Exolgan / Terminal 4</p>
+              <p class="mt-[5px] text-[16px] text-brand-navy">Exolgan / Terminal 4</p>
             </div>
           </div>
         </section>
-        <section class="mt-4 grid gap-4 lg:mt-[20px] lg:gap-[17px] lg:grid-cols-[1fr_216px]">
+        <section class="mt-4 grid gap-4 lg:mt-[15px] lg:gap-[15px] lg:grid-cols-[1fr_216px]">
           <article class="bg-brand-panel px-4 pb-5 pt-5 text-center text-brand-navy sm:px-6 lg:px-[20px] lg:pb-[22px] lg:pt-[20px]">
-            <h2 class="text-[18px] font-bold uppercase">Tipo de carga : LCL</h2>
-            <p class="mt-[12px] text-[17px] uppercase">Composición de la carga:</p>
-            <p class="mt-[4px] text-[16px]">Tipo : Paquetes</p>
+            <h2 class="text-[18px] font-bold uppercase text-brand-navy">Tipo de carga : LCL</h2>
+            <p class="mt-[12px] text-[17px] uppercase text-brand-navy font-semibold">Composición de la carga:</p>
+            <p class="mt-[4px] text-[16px] text-brand-navy font-semibold">Tipo : <span class="font-normal text-brand-navy">Paquetes</span></p>
             <div class="mt-[18px] grid gap-8 md:grid-cols-3">
               <div>
-                <svg viewBox="0 0 64 64" class="mx-auto h-[74px] w-[74px] text-[#434343]" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 26h20v14H14z"></path><path d="M18 18h20v14H18z"></path><path d="M30 18v8"></path><path d="M38 26h12v14H38z"></path><path d="M10 40h44v10H10z"></path></svg>
-                <p class="mt-[10px] text-[16px]"><span class="font-bold uppercase">Cant. bultos:</span> 670</p>
+                <img src="../assets/icons/bultos-carga.svg" alt="Bultos" class="mx-auto h-[74px] w-[74px] object-contain" />
+                <p class="mt-[10px] text-[16px] text-brand-navy"><span class="font-bold uppercase">Cant. bultos:</span></p>
+                <p class="text-[16px] text-brand-navy">670</p>
               </div>
               <div>
-                <svg viewBox="0 0 64 64" class="mx-auto h-[74px] w-[74px] text-[#434343]" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M24 16h16"></path><path d="M20 24h24l8 24a4 4 0 0 1-4 5H16a4 4 0 0 1-4-5z"></path><circle cx="32" cy="16" r="4"></circle><path d="M25 38h14"></path><path d="M25 46h14"></path></svg>
-                <p class="mt-[10px] text-[16px]"><span class="font-bold uppercase">Peso total:</span> 6656 kgs</p>
+                <img src="../assets/icons/peso-carga.svg" alt="Peso" class="mx-auto h-[74px] w-[74px] object-contain" />
+                <p class="mt-[10px] text-[16px] text-brand-navy"><span class="font-bold uppercase">Peso total:</span><span class="font-normal text-brand-navy"> 6656</span></p>
+                <p class="text-[16px] text-brand-navy">kgs</p>
               </div>
               <div>
-                <svg viewBox="0 0 64 64" class="mx-auto h-[74px] w-[74px]" fill="none" stroke="#434343" stroke-width="2.2"><path d="m18 20 17-8 16 8-17 8z"></path><path d="m18 20 17 8v24l-17-8z"></path><path d="m51 20-16 8v24l16-8z"></path><path d="m27 16 17 8"></path><path d="m25 46 7 3"></path><path d="m40 48 9-5" stroke="#20c3ef"></path></svg>
-                <p class="mt-[10px] text-[16px]"><span class="font-bold uppercase">Medida total:</span> 25,27</p>
+                <img src="../assets/icons/medida-carga.svg" alt="Medida" class="mx-auto h-[74px] w-[74px] object-contain" />
+                <p class="mt-[10px] text-[16px] text-brand-navy"><span class="font-bold uppercase">Medida total:</span></p>
+                <p class="text-[16px] text-brand-navy">25,27</p>
               </div>
             </div>
           </article>
-          <article class="bg-brand-panel px-4 pb-5 pt-5 text-[15px] leading-[1.78] text-[#676d76] sm:px-5 lg:px-[12px] lg:pb-[16px] lg:pt-[18px]">
-            <h2 class="mb-[10px] text-center text-[18px] font-bold uppercase text-brand-navy">Malvina</h2>
-            <p><span class="font-bold text-brand-navy">Nro. Mani:</span> 016026Y</p>
-            <p><span class="font-bold text-brand-navy">Puerto SIM:</span> CNSGH</p>
-            <p><span class="font-bold text-brand-navy">Fecha cierre:</span> 02/02/2023</p>
-            <p class="flex items-center gap-1"><span class="font-bold text-brand-navy">Condición:</span> Mala Condición
-              <svg viewBox="0 0 24 24" class="h-5 w-5 text-brand-cyan" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
-            </p>
-            <p><span class="font-bold text-brand-navy">Deposito:</span> Gemez S.A. I</p>
+          <article class="bg-brand-panel px-4 pb-5 pt-4 text-[15px] leading-[1.35] text-brand-navy sm:px-5 lg:px-[12px] lg:pb-[16px] lg:pt-[14px]">
+            <h2 class="mb-[14px] text-center text-[18px] font-bold uppercase text-brand-navy">Malvina</h2>
+            <p><span class="text-brand-navy font-bold">Nro. Mani:</span> <span class="text-brand-navy ">016026Y</span></p>
+            <p class="mt-[10px]"><span class="text-brand-navy font-bold">Puerto SIM:</span> <span class="text-brand-navy">CNSGH</span></p>
+            <p class="mt-[10px]"><span class="text-brand-navy font-bold">Fecha cierre:</span> <span class="text-brand-navy">02/02/2023</span></p>
+            <div class="mt-[10px] flex items-center gap-1">
+              <p><span class="text-brand-navy font-bold">Condición:</span> <span class="text-brand-navy">Mala Condición</span></p>
+              <img src="../assets/icons/descarga-estado.svg" alt="Estado" class="h-5 w-5 shrink-0" />
+            </div>
+            <p class="mt-[10px]"><span class="text-brand-navy font-bold">Deposito:</span> <span class="text-brand-navy">Gemez S.A. I</span></p>
           </article>
         </section>
       </div>
@@ -304,9 +310,10 @@
   </section>
 
   <!-- Variant: Terrestre -->
-  <section id="terrestre" class="mx-auto mt-[58px] max-w-[1234px] scroll-mt-10 border-t border-brand-line pt-[24px]">
-    <div class="grid gap-4 lg:gap-[15px] lg:grid-cols-[430px_1fr]">
-      <aside class="bg-brand-navyDark px-5 pb-6 pt-5 text-white sm:px-6 lg:px-[29px] lg:pb-[34px] lg:pt-[21px]">
+  <section id="terrestre" class="relative mx-auto mt-[58px] max-w-[1234px] scroll-mt-10 border-t border-brand-line pt-[24px]">
+    <div class="pointer-events-none absolute left-[-100vw] top-[107px] hidden h-[243px] w-[300vw] bg-brand-panel lg:block"></div>
+    <div class="relative z-10 grid gap-4 lg:gap-[15px] lg:grid-cols-[430px_1fr]">
+      <aside class="relative z-10 bg-brand-navyDark px-5 pb-6 pt-5 text-white sm:px-6 lg:px-[29px] lg:pb-[34px] lg:pt-[21px]">
         <p class="text-[15px] leading-none text-[#d9ecf6]">BL / N° CONTENEDOR</p>
         <form action="#terrestre" class="mt-[16px] space-y-3 text-[#8a8f97] lg:space-y-0">
           <div class="flex h-[45px] items-center bg-white lg:pr-[10px]">
@@ -337,7 +344,7 @@
           <p>CERTIFICADO</p>
         </div>
         <p class="mt-5 flex items-center gap-2 text-[16px] leading-[1.22] sm:text-[17px] lg:mt-[21px] lg:text-[18px] lg:leading-[1.23]"><span class="font-bold uppercase">Libre deuda:</span>
-          <svg viewBox="0 0 24 24" class="h-[22px] w-[22px] text-white" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
+          <img src="../assets/icons/descarga-estado.svg" alt="Descarga de estado" class="h-[22px] w-[22px]" />
         </p>
       </aside>
       <div>
@@ -345,53 +352,57 @@
           <div class="flex items-center gap-[17px] text-[19px] font-bold uppercase"><span class="h-[31px] w-[31px] rounded-full bg-brand-green"></span><span>Estado: Arribado</span></div>
           <div class="flex w-full flex-wrap items-center gap-x-4 gap-y-2 text-[13px] uppercase text-[#d6ebf5] sm:text-[14px] lg:w-auto lg:gap-[20px]"><span>Mantenerme informado</span><span>Si</span><span class="flex h-[18px] w-[36px] items-center rounded-full bg-brand-cyan px-[2px]"><span class="ml-auto h-[14px] w-[14px] rounded-full bg-[#f4ddd8]"></span></span><span>No</span></div>
         </div>
-        <section class="bg-brand-panel px-4 py-5 sm:px-6 lg:px-[42px] lg:py-[19px]">
-          <div class="flex justify-center"><img src="../assets/img/maersk-logo.png" alt="Maersk" class="h-[50px] w-[148px] object-contain" /></div>
-          <div class="mt-5 grid items-start gap-8 lg:mt-[20px] lg:gap-5 lg:grid-cols-[1fr_250px_1fr]">
+        <section class="relative z-0 bg-brand-panel px-4 py-5 sm:px-6 lg:mt-[15px] lg:bg-transparent lg:px-[42px] lg:py-[19px]">
+          <div class="relative z-10 flex justify-center"><img src="../assets/img/maersk-logo.png" alt="Maersk" class="h-[50px] w-[148px] object-contain" /></div>
+          <div class="relative z-10 mt-5 grid items-start gap-8 lg:mt-[20px] lg:gap-5 lg:grid-cols-[1fr_250px_1fr]">
             <div class="justify-self-center text-center text-brand-navy">
-              <svg viewBox="0 0 64 64" class="mx-auto h-[50px] w-[50px]" fill="currentColor"><path d="M14 37h27v8H14z"></path><path d="M42 27h8l7 10v8h-9v-5h-6z"></path><path d="M20 20h18v14H20z"></path><circle cx="21" cy="48" r="4"></circle><circle cx="45" cy="48" r="4"></circle></svg>
-              <p class="mt-[8px] text-[15px] text-[#33445b]">Fecha embarque: 12/04/19</p>
+              <img src="../assets/icons/camion-carga.svg" alt="Camion" class="mx-auto h-[50px] w-[50px] object-contain" />
+              <p class="mt-[8px] text-[15px] text-brand-navy">Fecha embarque: 12/04/19</p>
               <p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-arg inline-block h-[11px] w-[15px]"></span>Argentina, 01, AR</p>
-              <p class="mt-[5px] text-[16px] text-[#33445b]">Exolgan / Terminal 4</p>
+              <p class="mt-[5px] text-[16px] text-brand-navy">Exolgan / Terminal 4</p>
             </div>
             <div class="order-3 flex items-center justify-center gap-3 self-center text-[15px] text-brand-text lg:order-none lg:gap-[15px] lg:pt-[14px] lg:text-[16px]"><span class="hidden h-px w-[137px] bg-white lg:block"></span><span>Directo</span><span class="hidden h-px w-[137px] bg-white lg:block"></span></div>
             <div class="justify-self-center text-center text-brand-navy">
-              <svg viewBox="0 0 64 64" class="mx-auto h-[50px] w-[50px]" fill="currentColor"><path d="M14 37h27v8H14z"></path><path d="M42 27h8l7 10v8h-9v-5h-6z"></path><path d="M20 20h18v14H20z"></path><circle cx="21" cy="48" r="4"></circle><circle cx="45" cy="48" r="4"></circle></svg>
-              <p class="mt-[8px] text-[15px] text-[#33445b]">Fecha de Arribo: 12/04/19</p>
+              <img src="../assets/icons/camion-carga.svg" alt="Camion" class="mx-auto h-[50px] w-[50px] object-contain" />
+              <p class="mt-[8px] text-[15px] text-brand-navy">Fecha de Arribo: 12/04/19</p>
               <p class="mt-[4px] flex items-center justify-center gap-2 text-[17px] font-bold"><span class="flag-bel inline-block h-[11px] w-[15px]"></span>Antwerp, 01, BE</p>
-              <p class="mt-[5px] text-[16px] text-[#33445b]">Exolgan / Terminal 4</p>
+              <p class="mt-[5px] text-[16px] text-brand-navy">Exolgan / Terminal 4</p>
             </div>
           </div>
         </section>
-        <section class="mt-4 grid gap-4 lg:mt-[20px] lg:gap-[17px] lg:grid-cols-[1fr_216px]">
+        <section class="mt-4 grid gap-4 lg:mt-[15px] lg:gap-[15px] lg:grid-cols-[1fr_216px]">
           <article class="bg-brand-panel px-4 pb-5 pt-5 text-center text-brand-navy sm:px-6 lg:px-[20px] lg:pb-[22px] lg:pt-[20px]">
-            <h2 class="text-[18px] font-bold uppercase">Tipo de carga : LCL</h2>
-            <p class="mt-[12px] text-[17px] uppercase">Composición de la carga:</p>
-            <p class="mt-[4px] text-[16px]">Tipo : Paquetes</p>
+            <h2 class="text-[18px] font-bold uppercase text-brand-navy">Tipo de carga : LCL</h2>
+            <p class="mt-[12px] text-[17px] uppercase text-brand-navy">Composición de la carga:</p>
+            <p class="mt-[4px] text-[16px] text-brand-navy">Tipo : <span class="font-normal text-brand-navy">Paquetes</span></p>
             <div class="mt-[18px] grid gap-8 md:grid-cols-3">
               <div>
-                <svg viewBox="0 0 64 64" class="mx-auto h-[74px] w-[74px] text-[#434343]" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 26h20v14H14z"></path><path d="M18 18h20v14H18z"></path><path d="M30 18v8"></path><path d="M38 26h12v14H38z"></path><path d="M10 40h44v10H10z"></path></svg>
-                <p class="mt-[10px] text-[16px]"><span class="font-bold uppercase">Cant. bultos:</span> 670</p>
+                <img src="../assets/icons/bultos-carga.svg" alt="Bultos" class="mx-auto h-[74px] w-[74px] object-contain" />
+                <p class="mt-[10px] text-[16px] text-brand-navy"><span class="font-bold uppercase">Cant. bultos:</span></p>
+                <p class="text-[16px] text-brand-navy">670</p>
               </div>
               <div>
-                <svg viewBox="0 0 64 64" class="mx-auto h-[74px] w-[74px] text-[#434343]" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M24 16h16"></path><path d="M20 24h24l8 24a4 4 0 0 1-4 5H16a4 4 0 0 1-4-5z"></path><circle cx="32" cy="16" r="4"></circle><path d="M25 38h14"></path><path d="M25 46h14"></path></svg>
-                <p class="mt-[10px] text-[16px]"><span class="font-bold uppercase">Peso total:</span> 6656 kgs</p>
+                <img src="../assets/icons/peso-carga.svg" alt="Peso" class="mx-auto h-[74px] w-[74px] object-contain" />
+                <p class="mt-[10px] text-[16px] text-brand-navy"><span class="font-bold uppercase">Peso total:</span><span class="font-normal text-brand-navy"> 6656</span></p>
+                <p class="text-[16px] text-brand-navy">kgs</p>
               </div>
               <div>
-                <svg viewBox="0 0 64 64" class="mx-auto h-[74px] w-[74px]" fill="none" stroke="#434343" stroke-width="2.2"><path d="m18 20 17-8 16 8-17 8z"></path><path d="m18 20 17 8v24l-17-8z"></path><path d="m51 20-16 8v24l16-8z"></path><path d="m27 16 17 8"></path><path d="m25 46 7 3"></path><path d="m40 48 9-5" stroke="#20c3ef"></path></svg>
-                <p class="mt-[10px] text-[16px]"><span class="font-bold uppercase">Medida total:</span> 25,27</p>
+                <img src="../assets/icons/medida-carga.svg" alt="Medida" class="mx-auto h-[74px] w-[74px] object-contain" />
+                <p class="mt-[10px] text-[16px] text-brand-navy"><span class="font-bold uppercase">Medida total:</span></p>
+                <p class="text-[16px] text-brand-navy">25,27</p>
               </div>
             </div>
           </article>
-          <article class="bg-brand-panel px-4 pb-5 pt-5 text-[15px] leading-[1.78] text-[#676d76] sm:px-5 lg:px-[12px] lg:pb-[16px] lg:pt-[18px]">
-            <h2 class="mb-[10px] text-center text-[18px] font-bold uppercase text-brand-navy">Malvina</h2>
-            <p><span class="font-bold text-brand-navy">Nro. Mani:</span> 016026Y</p>
-            <p><span class="font-bold text-brand-navy">Puerto SIM:</span> CNSGH</p>
-            <p><span class="font-bold text-brand-navy">Fecha cierre:</span> 02/02/2023</p>
-            <p class="flex items-center gap-1"><span class="font-bold text-brand-navy">Condición:</span> Mala Condición
-              <svg viewBox="0 0 24 24" class="h-5 w-5 text-brand-cyan" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14l4-2 4 2 4-2 4 2V9z"></path><path d="M14 3v6h6"></path><path d="M8 10h4"></path><path d="M8 13h7"></path><path d="M17 14a3 3 0 1 0 3 3"></path><path d="m20 15 .4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4z"></path></svg>
-            </p>
-            <p><span class="font-bold text-brand-navy">Deposito:</span> Gemez S.A. I</p>
+          <article class="bg-brand-panel px-4 pb-5 pt-4 text-[15px] leading-[1.35] text-brand-navy sm:px-5 lg:px-[12px] lg:pb-[16px] lg:pt-[14px]">
+            <h2 class="mb-[14px] text-center text-[18px] font-bold uppercase text-brand-navy">Malvina</h2>
+            <p><span class="text-brand-navy font-bold">Nro. Mani:</span> <span class="text-brand-navy text-brand-navy">016026Y</span></p>
+            <p class="mt-[10px]"><span class="text-brand-navy font-bold">Puerto SIM:</span> <span class="text-brand-navy text-brand-navy">CNSGH</span></p>
+            <p class="mt-[10px]"><span class="text-brand-navy font-bold">Fecha cierre:</span> <span class="text-brand-navy text-brand-navy">02/02/2023</span></p>
+            <div class="mt-[10px] flex items-center gap-1">
+              <p><span class="text-brand-navy font-bold">Condición:</span> <span class="text-brand-navy">Mala Condición</span></p>
+              <img src="../assets/icons/descarga-estado.svg" alt="Estado" class="h-5 w-5 shrink-0" />
+            </div>
+            <p class="mt-[10px]"><span class="text-brand-navy font-bold">Deposito:</span> <span class="text-brand-navy">Gemez S.A. I</span></p>
           </article>
         </section>
       </div>
