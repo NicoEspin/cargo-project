@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NTL Tracking | Estados de error</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,7 +18,7 @@
               navyDark: '#18243e',
               cyan: '#20c3ef',
               text: '#6f7480',
-              panel: '#dedede',
+              panel: '#e7e7e7',
               green: '#52ef7d'
             }
           },
@@ -27,7 +30,7 @@
     }
   </script>
   <style>
-    body { font-family: Arial, Helvetica, sans-serif; }
+    body { font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
     .world-map {
       background-image:
         radial-gradient(circle at 15% 55%, rgba(255,255,255,.08) 0 12%, transparent 12%),
@@ -46,15 +49,15 @@
 <body class="overflow-x-hidden bg-white text-brand-text antialiased">
 
 <!-- Top navigation -->
-<header class="mx-auto max-w-[1366px] px-6 pb-[46px] pt-[58px] lg:px-0">
-  <nav class="mx-auto hidden max-w-[1050px] items-center justify-center gap-y-4 text-[24px] uppercase tracking-[-0.02em] text-[#666b73] lg:flex">
-    <a href="carga-maritima.html#maritima" class="border-b-[5px] border-brand-cyan px-10 pb-[7px] text-brand-cyan">Detalle de carga</a>
-    <span class="px-8 text-[#8e8e8e]">|</span>
-    <a href="otros-embarques.html" class="px-10 pb-[7px]">Otros embarques</a>
-    <span class="px-8 text-[#8e8e8e]">|</span>
-    <a href="estado-cuenta.html" class="px-10 pb-[7px]">Estado de cuenta</a>
-    <span class="px-8 text-[#8e8e8e]">|</span>
-    <a href="mi-perfil.html" class="px-10 pb-[7px]">Mi perfil</a>
+<header class="mx-auto max-w-[1366px] px-6 pb-[64px] pt-[58px] lg:px-0">
+  <nav class="mx-auto hidden max-w-[1036px] items-end justify-between text-[18px] font-normal uppercase leading-none tracking-[-0.02em] text-[#6a6d72] lg:flex">
+    <a href="carga-maritima.html#maritima" class="border-b-[4px] border-brand-cyan pb-[6px] text-brand-cyan">Detalle de carga</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="otros-embarques.html" class="pb-[10px]">Otros embarques</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="estado-cuenta.html" class="pb-[10px]">Estado de cuenta</a>
+    <span class="pb-[9px] text-[#919191]">|</span>
+    <a href="mi-perfil.html" class="pb-[10px]">Mi perfil</a>
   </nav>
   <nav class="mx-auto max-w-[640px] text-[16px] font-normal uppercase leading-none tracking-[-0.02em] text-[#6a6d72] sm:text-[18px] lg:hidden">
     <div class="flex items-end justify-center gap-5 sm:gap-7">
@@ -76,7 +79,7 @@
     <div class="absolute inset-x-0 top-[122px] h-[420px] bg-brand-panel lg:top-[92px] lg:h-[203px]"></div>
     <div class="relative z-0 mx-auto max-w-[640px] px-4 pb-8 pt-[180px] text-center lg:absolute lg:left-[230px] lg:top-[145px] lg:mx-0 lg:max-w-[565px] lg:px-0 lg:pb-0 lg:pt-0 lg:text-left">
       <h1 class="text-[42px] font-bold uppercase leading-none tracking-[-0.045em] text-brand-navy sm:text-[50px] lg:text-[59px]">Move Together</h1>
-      <p class="mt-6 max-w-[560px] text-[18px] leading-[1.45] text-[#5f6672] sm:text-[19px] lg:mt-8 lg:text-[22px]">
+      <p class="mt-6 max-w-[560px] text-[18px] leading-[1.42] text-brand-text sm:text-[18px] lg:mt-[18px] lg:text-[18px]">
         En NTL seguimos sumando soluciones efectivas. Chequeá el estado de tus cargas,
         detalles y documentación, simplemente ingresando BL o N° de Contendor.
       </p>
@@ -92,7 +95,7 @@
       <div class="text-brand-cyan">
         <svg viewBox="0 0 24 24" class="mx-auto h-[58px] w-[58px]" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v8"></path><circle cx="12" cy="18" r="1"></circle></svg>
       </div>
-      <p class="mt-[8px] text-[20px] leading-[1.35] text-[#767a80]">Para poder realizar esta consulta Ud. debe estar Logueado.</p>
+      <p class="mt-[8px] text-[20px] leading-[1.35] text-brand-text">Para poder realizar esta consulta Ud. debe estar Logueado.</p>
       <form action="#login" class="mx-auto mt-[46px] max-w-[240px] space-y-[26px] text-[16px] italic text-[#979ba2]">
         <input class="w-full border-b border-[#a9acb2] pb-[7px] text-center outline-none" placeholder="Usuario" />
         <input class="w-full border-b border-[#a9acb2] pb-[7px] text-center outline-none" placeholder="Contraseña" type="password" />
@@ -107,7 +110,7 @@
     <div class="absolute inset-x-0 top-[122px] h-[420px] bg-brand-panel lg:top-[116px] lg:h-[203px]"></div>
     <div class="relative z-0 mx-auto max-w-[640px] px-4 pb-8 pt-[180px] text-center lg:absolute lg:left-[230px] lg:top-[169px] lg:mx-0 lg:max-w-[565px] lg:px-0 lg:pb-0 lg:pt-0 lg:text-left">
       <h2 class="text-[42px] font-bold uppercase leading-none tracking-[-0.045em] text-brand-navy sm:text-[50px] lg:text-[59px]">Move Together</h2>
-      <p class="mt-6 max-w-[560px] text-[18px] leading-[1.45] text-[#5f6672] sm:text-[19px] lg:mt-8 lg:text-[22px]">
+      <p class="mt-6 max-w-[560px] text-[18px] leading-[1.42] text-brand-text sm:text-[18px] lg:mt-[18px] lg:text-[18px]">
         En NTL seguimos sumando soluciones efectivas. Chequeá el estado de tus cargas,
         detalles y documentación, simplemente ingresando BL o N° de Contendor.
       </p>
@@ -122,7 +125,7 @@
       <div class="text-brand-cyan">
         <svg viewBox="0 0 24 24" class="mx-auto h-[58px] w-[58px]" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v8"></path><circle cx="12" cy="18" r="1"></circle></svg>
       </div>
-      <p class="mx-auto mt-[10px] max-w-[432px] text-[20px] leading-[1.35] text-[#767a80]">Ud. ha ingresado un N° de BL erróneo. Verifique e intente nuevamente. Si el problema persiste por favor <a href="#" class="text-brand-cyan underline">Contactarse</a></p>
+      <p class="mx-auto mt-[10px] max-w-[432px] text-[20px] leading-[1.35] text-brand-text">Ud. ha ingresado un N° de BL erróneo. Verifique e intente nuevamente. Si el problema persiste por favor <a href="#" class="text-brand-cyan underline">Contactarse</a></p>
       <a href="../index.html" class="mt-[28px] inline-block rounded-[10px] bg-brand-cyan px-[31px] py-[9px] text-[16px] uppercase text-white">OK</a>
     </div>
   </section>
@@ -153,7 +156,7 @@
     <div class="pointer-events-none absolute left-1/2 top-[2px] z-10 w-[calc(100%-2rem)] max-w-[574px] -translate-x-1/2 bg-white px-6 pb-8 pt-6 text-center shadow-modal sm:px-10 lg:w-[574px] lg:px-[44px] lg:pb-[34px] lg:pt-[26px]">
       <div class="absolute right-[20px] top-[14px] text-[30px] leading-none text-[#d5d5d5]">×</div>
       <div class="text-brand-cyan"><svg viewBox="0 0 24 24" class="mx-auto h-[58px] w-[58px]" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v8"></path><circle cx="12" cy="18" r="1"></circle></svg></div>
-      <p class="mt-[8px] text-[20px] leading-[1.35] text-[#767a80]">Para poder realizar esta consulta Ud. debe estar Logueado.</p>
+      <p class="mt-[8px] text-[20px] leading-[1.35] text-brand-text">Para poder realizar esta consulta Ud. debe estar Logueado.</p>
       <div class="mx-auto mt-[46px] max-w-[240px] space-y-[26px] text-[16px] italic text-[#979ba2]"><div class="border-b border-[#a9acb2] pb-[7px] text-center">Usuario</div><div class="border-b border-[#a9acb2] pb-[7px] text-center">Contraseña</div><div class="inline-block rounded-[10px] bg-brand-cyan px-[26px] py-[9px] text-[16px] font-normal uppercase not-italic text-white">Ingresar</div></div>
       <p class="mt-[28px] text-[17px] text-[#7d8086]">Si aún no tiene usuario <span class="text-brand-cyan underline">Contactarse</span></p>
     </div>
@@ -184,7 +187,7 @@
     </div>
     <div class="pointer-events-none absolute left-1/2 top-[4px] z-10 w-[calc(100%-2rem)] max-w-[574px] -translate-x-1/2 bg-white px-6 pb-8 pt-6 text-center shadow-modal sm:px-10 lg:w-[574px] lg:px-[44px] lg:pb-[34px] lg:pt-[26px]">
       <div class="text-brand-cyan"><svg viewBox="0 0 24 24" class="mx-auto h-[58px] w-[58px]" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v8"></path><circle cx="12" cy="18" r="1"></circle></svg></div>
-      <p class="mx-auto mt-[10px] max-w-[432px] text-[20px] leading-[1.35] text-[#767a80]">Ud. ha ingresado un N° de BL erróneo. Verifique e intente nuevamente. Si el problema persiste por favor <span class="text-brand-cyan underline">Contactarse</span></p>
+      <p class="mx-auto mt-[10px] max-w-[432px] text-[20px] leading-[1.35] text-brand-text">Ud. ha ingresado un N° de BL erróneo. Verifique e intente nuevamente. Si el problema persiste por favor <span class="text-brand-cyan underline">Contactarse</span></p>
       <div class="mt-[28px] inline-block rounded-[10px] bg-brand-cyan px-[31px] py-[9px] text-[16px] uppercase text-white">OK</div>
     </div>
   </section>
