@@ -97,10 +97,10 @@
         </dl>
 
         <div class="mt-5 bg-brand-panel px-6 py-4 text-[14px] leading-[1.22] text-[#6d7279] sm:px-10 lg:mt-[18px] lg:px-[66px] lg:py-[15px] lg:text-[15px] lg:leading-[1.18]">
-          <p>ASEGURADORA: Hanseatica</p>
-          <p>IMPORTE: USD 5000</p>
-          <p>N° PÓLIZA: 3868745</p>
-          <p>CERTIFICADO</p>
+          <p><span class="text-brand-navy">ASEGURADORA:</span> Hanseatica</p>
+          <p><span class="text-brand-navy">IMPORTE:</span> USD 5000</p>
+          <p><span class="text-brand-navy">N° POLIZA:</span> 3868745</p>
+          <p><span class="text-brand-navy">CERTIFICADO</span></p>
         </div>
 
         <div class="mt-5 space-y-[8px] text-[16px] leading-[1.22] sm:text-[17px] lg:mt-[23px] lg:text-[18px] lg:leading-[1.18]">
@@ -114,7 +114,7 @@
       </aside>
 
       <!-- Main content -->
-      <div>
+      <div class="lg:flex lg:flex-col">
         <div class="flex min-h-[68px] flex-col items-start gap-3 bg-brand-navyDark px-4 py-4 text-white sm:px-5 lg:flex-row lg:items-center lg:justify-between lg:px-[20px] lg:py-0">
           <div class="flex items-center gap-[17px] text-[19px] font-bold uppercase">
             <span class="h-[31px] w-[31px] rounded-full bg-brand-green"></span>
@@ -149,8 +149,8 @@
           </div>
         </section>
 
-        <section class="mt-4 grid gap-4 lg:mt-[15px] lg:gap-[15px] lg:grid-cols-[1fr_216px]">
-          <article class="bg-brand-panel px-4 pb-5 pt-4 text-center text-brand-navy sm:px-6 lg:px-[24px] lg:pb-[22px] lg:pt-[15px]">
+        <section class="mt-4 grid gap-4 lg:mt-[15px] lg:flex-1 lg:gap-[15px] lg:grid-cols-[1fr_216px]">
+          <article class="bg-brand-panel px-4 pb-5 pt-4 text-center text-brand-navy sm:px-6 lg:flex lg:h-full lg:flex-col lg:px-[24px] lg:pb-[22px] lg:pt-[15px]">
             <h2 class="text-[18px] font-bold uppercase tracking-[-0.01em]">Tipo de carga : FCL</h2>
             <table class="mt-[13px] hidden w-full table-fixed text-left text-[13px] leading-[1.2] tracking-[-0.01em] text-[#6b7078] md:table">
               <thead class="border-b border-white font-bold uppercase text-brand-navy">
@@ -164,6 +164,8 @@
                 </tr>
               </thead>
               <tbody>
+                <tr class="border-b border-white text-brand-navy"><td class="py-[11px]">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
+                <tr class="border-b border-white text-brand-navy"><td class="py-[11px]">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
                 <tr class="border-b border-white text-brand-navy"><td class="py-[11px]">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
                 <tr class="border-b border-white text-brand-navy"><td class="py-[11px]">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
                 <tr class="text-brand-navy"><td class="py-[11px] ">20</td><td>GLDU 5532223</td><td>CN3157367</td><td>670 CAJAS</td><td>6,656.00</td><td class="text-right">25.27</td></tr>
@@ -195,7 +197,7 @@
                 <p><span class="font-bold uppercase text-brand-navy">Volumen:</span> 25.27</p>
               </article>
             </div>
-            <div class="mt-[13px] flex items-center justify-center gap-[8px] text-[#747981]">
+            <div class="mt-[13px] flex items-center justify-center gap-[8px] text-[#747981] lg:mt-auto">
                 <svg viewBox="0 0 12 8" class="h-[8px] w-[12px]" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M1 6.5 6 1.5l5 5" />
               </svg>
@@ -204,7 +206,7 @@
               </svg>
             </div>
           </article>
-          <article class="bg-brand-panel px-4 pb-5 pt-4 text-[15px] leading-[1.35] text-brand-navy sm:px-5 lg:px-[12px] lg:pb-[16px] lg:pt-[14px]">
+          <article class="bg-brand-panel px-4 pb-5 pt-4 text-[15px] leading-[1.35] text-brand-navy sm:px-5 lg:h-full lg:px-[12px] lg:pb-[16px] lg:pt-[14px]">
             <h2 class="mb-[14px] text-center text-[18px] font-bold uppercase text-brand-navy">Malvina</h2>
             <p><span class="font-bold text-brand-navy">Nro. Mani:</span> <span class="text-brand-navy">016026Y</span></p>
             <p class="mt-[10px]"><span class="font-bold text-brand-navy">Puerto SIM:</span> <span class="text-brand-navy">CNSGH</span></p>
@@ -273,7 +275,7 @@
             </div>
           </div>
         </section>
-        <section class="mt-4 grid gap-4 lg:mt-[15px] lg:gap-[15px] lg:grid-cols-[1fr_216px]">
+        <section class="mt-4 grid gap-4 lg:mt-[15px] lg:gap-[15px] lg:grid-cols-[1fr_232px]">
           <article class="bg-brand-panel px-4 pb-5 pt-5 text-center text-brand-navy sm:px-6 lg:px-[20px] lg:pb-[22px] lg:pt-[20px]">
             <h2 class="text-[18px] font-bold uppercase text-brand-navy">Tipo de carga : LCL</h2>
             <p class="mt-[12px] text-[17px] uppercase text-brand-navy font-semibold">Composición de la carga:</p>
@@ -301,9 +303,9 @@
             <p><span class="text-brand-navy font-bold">Nro. Mani:</span> <span class="text-brand-navy ">016026Y</span></p>
             <p class="mt-[10px]"><span class="text-brand-navy font-bold">Puerto SIM:</span> <span class="text-brand-navy">CNSGH</span></p>
             <p class="mt-[10px]"><span class="text-brand-navy font-bold">Fecha cierre:</span> <span class="text-brand-navy">02/02/2023</span></p>
-            <div class="mt-[10px] flex items-center gap-1">
-              <p><span class="text-brand-navy font-bold">Condición:</span> <span class="text-brand-navy">Mala Condición</span></p>
-              <img src="../assets/icons/descarga-estado-azul.svg" alt="Estado" class="h-5 w-5 shrink-0" />
+            <div class="mt-[10px] flex items-center gap-[2px]">
+              <p class="whitespace-nowrap text-[14px]"><span class="text-brand-navy font-bold">Condición:</span> <span class="text-brand-navy">Mala Condición</span></p>
+              <img src="../assets/icons/descarga-estado-azul.svg" alt="Estado" class="h-4 w-4 shrink-0" />
             </div>
             <p class="mt-[10px]"><span class="text-brand-navy font-bold">Deposito:</span> <span class="text-brand-navy">Gemez S.A. I</span></p>
           </article>
@@ -341,10 +343,10 @@
           <div><dt class="inline font-bold uppercase">Seguro:</dt> <dd class="inline">SI <span class="ml-[7px] inline-block h-[11px] w-[11px] rotate-45 border-b-2 border-r-2 border-white align-middle"></span></dd></div>
         </dl>
         <div class="mt-5 bg-brand-panel px-6 py-4 text-[14px] leading-[1.22] text-[#6d7279] sm:px-10 lg:mt-[18px] lg:px-[66px] lg:py-[15px] lg:text-[15px] lg:leading-[1.18]">
-          <p>ASEGURADORA: Hanseatica</p>
-          <p>IMPORTE: USD 5000</p>
-          <p>N° PÓLIZA: 3868745</p>
-          <p>CERTIFICADO</p>
+        <p><span class="text-brand-navy">ASEGURADORA:</span> Hanseatica</p>
+          <p><span class="text-brand-navy">IMPORTE:</span> USD 5000</p>
+          <p><span class="text-brand-navy">N° POLIZA:</span> 3868745</p>
+          <p><span class="text-brand-navy">CERTIFICADO</span></p>
         </div>
         <p class="mt-5 flex items-center gap-2 text-[16px] leading-[1.22] sm:text-[17px] lg:mt-[21px] lg:text-[18px] lg:leading-[1.23]"><span class="font-bold uppercase">Libre deuda:</span>
           <img src="../assets/icons/descarga-estado-blanco.svg" alt="Descarga de estado" class="h-[22px] w-[22px]" />
@@ -373,7 +375,7 @@
             </div>
           </div>
         </section>
-        <section class="mt-4 grid gap-4 lg:mt-[15px] lg:gap-[15px] lg:grid-cols-[1fr_216px]">
+        <section class="mt-4 grid gap-4 lg:mt-[15px] lg:gap-[15px] lg:grid-cols-[1fr_232px]">
           <article class="bg-brand-panel px-4 pb-5 pt-5 text-center text-brand-navy sm:px-6 lg:px-[20px] lg:pb-[22px] lg:pt-[20px]">
             <h2 class="text-[18px] font-bold uppercase text-brand-navy">Tipo de carga : LCL</h2>
             <p class="mt-[12px] text-[17px] uppercase text-brand-navy">Composición de la carga:</p>
@@ -401,9 +403,9 @@
             <p><span class="text-brand-navy font-bold">Nro. Mani:</span> <span class="text-brand-navy text-brand-navy">016026Y</span></p>
             <p class="mt-[10px]"><span class="text-brand-navy font-bold">Puerto SIM:</span> <span class="text-brand-navy text-brand-navy">CNSGH</span></p>
             <p class="mt-[10px]"><span class="text-brand-navy font-bold">Fecha cierre:</span> <span class="text-brand-navy text-brand-navy">02/02/2023</span></p>
-            <div class="mt-[10px] flex items-center gap-1">
-              <p><span class="text-brand-navy font-bold">Condición:</span> <span class="text-brand-navy">Mala Condición</span></p>
-              <img src="../assets/icons/descarga-estado-azul.svg" alt="Estado" class="h-5 w-5 shrink-0" />
+            <div class="mt-[10px] flex items-center gap-[2px]">
+              <p class="whitespace-nowrap text-[14px]"><span class="text-brand-navy font-bold">Condición:</span> <span class="text-brand-navy">Mala Condición</span></p>
+              <img src="../assets/icons/descarga-estado-azul.svg" alt="Estado" class="h-4 w-4 shrink-0" />
             </div>
             <p class="mt-[10px]"><span class="text-brand-navy font-bold">Deposito:</span> <span class="text-brand-navy">Gemez S.A. I</span></p>
           </article>
