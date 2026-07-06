@@ -26,13 +26,25 @@
   </script>
   <style>
     body { font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
+
+    .estado-cuenta-grid {
+      grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(0, 1fr)
+        minmax(0, 0.5fr)
+        minmax(0, 1.1fr)
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        minmax(0, 0.8fr)
+        34px;
+    }
   </style>
 </head>
 <body class="bg-white text-brand-text antialiased">
 
 <!-- Top navigation -->
 <header class="mx-auto max-w-[1366px] px-6 pb-[64px] pt-[58px] lg:px-0">
-  <nav class="mx-auto hidden max-w-[915px] items-end justify-between text-[18px] font-normal uppercase leading-none tracking-[-0.02em] text-[#6a6d72] lg:flex">
+  <nav class="mx-auto hidden max-w-[1036px] items-end justify-between text-[18px] font-normal uppercase leading-none tracking-[-0.02em] text-[#6a6d72] lg:flex">
     <a href="carga-maritima.html#maritima" class="pb-[10px]">Detalle de carga</a>
     <span class="pb-[9px] text-[#919191]">|</span>
     <a href="otros-embarques.html" class="pb-[10px]">Otros embarques</a>
@@ -57,51 +69,70 @@
 
 <main id="estado-cuenta" class="mx-auto max-w-[1366px] px-4 pb-12 sm:px-6 lg:px-0 lg:pb-16">
   <!-- Account table -->
-  <section class="mx-auto max-w-[915px] bg-brand-panel px-4 py-5 sm:px-6 sm:py-6 lg:px-[38px] lg:py-[24px]">
-      <table class="hidden w-full table-fixed text-left text-[14px] leading-[1.15] tracking-[-0.01em] lg:table">
-        <thead class="border-b border-white text-brand-navy">
-          <tr class="uppercase">
-            <th class="pb-[17px]">Fecha de emisión</th>
-            <th class="pb-[17px]">N° Factura</th>
-            <th class="pb-[17px]">Tipo</th>
-            <th class="pb-[17px]">Referencia</th>
-            <th class="pb-[17px]">Imp. Adeudado</th>
-            <th class="pb-[17px]">Fecha de Venc.</th>
-            <th class="pb-[17px]">Vence en</th>
-            <th class="pb-[17px]"></th>
-          </tr>
-        </thead>
-        <tbody class="text-[#81858c]">
-          <tr class="border-b border-white">
-            <td class="py-[8px]"></td><td></td><td></td><td></td><td></td><td></td>
-            <td class="font-normal uppercase text-[#35c75f]">15 dias</td>
-            <td class="w-[34px] text-right text-brand-navy">
+  <section class="mx-auto max-w-[1036px] bg-brand-panel px-4 py-5 sm:px-6 sm:py-6 lg:px-[38px] lg:py-[24px]">
+      <div class="hidden lg:block">
+        <div class="estado-cuenta-grid grid w-full items-center gap-x-6 border-b border-white pb-[17px] text-left text-[12px] font-bold leading-[1.15] tracking-[-0.01em] text-brand-navy">
+          <div class="whitespace-nowrap uppercase">Fecha de emision</div>
+          <div class="whitespace-nowrap uppercase">N° Factura</div>
+          <div class="whitespace-nowrap uppercase w-[50px]">Tipo</div>
+          <div class="whitespace-nowrap uppercase">Referencia</div>
+          <div class="whitespace-nowrap uppercase">Imp. Adeudado</div>
+          <div class="whitespace-nowrap uppercase">Fecha de venc.</div>
+          <div class="whitespace-nowrap uppercase">Vence en</div>
+          <div></div>
+        </div>
+
+        <div class="text-[13px] leading-[1.15] tracking-[-0.01em] text-[#81858c]">
+          <div class="estado-cuenta-grid grid w-full items-center gap-x-6 border-b border-white py-[8px]">
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap w-[50px]"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap font-normal uppercase text-[#35c75f]">15 dias</div>
+            <div class="text-right text-brand-navy">
               <img src="../assets/icons/descarga-estado.svg" alt="Descargar estado" class="ml-auto h-[29px] w-[29px] object-contain" />
-            </td>
-          </tr>
-          <tr class="border-b border-white">
-            <td class="py-[8px]"></td><td></td><td></td><td></td><td></td><td></td>
-            <td class="font-normal uppercase text-[#6ecf60]">10 dias</td>
-            <td class="w-[34px] text-right text-brand-navy">
+            </div>
+          </div>
+          <div class="estado-cuenta-grid grid w-full items-center gap-x-6 border-b border-white py-[8px]">
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap w-[50px]"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap font-normal uppercase text-[#6ecf60]">10 dias</div>
+            <div class="text-right text-brand-navy">
               <img src="../assets/icons/descarga-estado.svg" alt="Descargar estado" class="ml-auto h-[29px] w-[29px] object-contain" />
-            </td>
-          </tr>
-          <tr class="border-b border-white">
-            <td class="py-[8px]"></td><td></td><td></td><td></td><td></td><td></td>
-            <td class="font-normal uppercase text-[#efb14a]">5 dias</td>
-            <td class="w-[34px] text-right text-brand-navy">
+            </div>
+          </div>
+          <div class="estado-cuenta-grid grid w-full items-center gap-x-6 border-b border-white py-[8px]">
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap w-[50px]"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap font-normal uppercase text-[#efb14a]">5 dias</div>
+            <div class="text-right text-brand-navy">
               <img src="../assets/icons/descarga-estado.svg" alt="Descargar estado" class="ml-auto h-[29px] w-[29px] object-contain" />
-            </td>
-          </tr>
-          <tr>
-            <td class="py-[8px]"></td><td></td><td></td><td></td><td></td><td></td>
-            <td class="font-normal uppercase text-[#ea4540]">Vencida</td>
-            <td class="w-[34px] text-right text-brand-navy">
+            </div>
+          </div>
+          <div class="estado-cuenta-grid grid w-full items-center gap-x-6 py-[8px]">
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap w-[50px]"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap"></div>
+            <div class="whitespace-nowrap font-normal uppercase text-[#ea4540]">Vencida</div>
+            <div class="text-right text-brand-navy">
               <img src="../assets/icons/descarga-estado.svg" alt="Descargar estado" class="ml-auto h-[29px] w-[29px] object-contain" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="space-y-4 lg:hidden">
         <article class="border-b border-white pb-4 text-[15px] leading-[1.38] text-[#767b83]">
